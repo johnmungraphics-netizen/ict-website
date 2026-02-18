@@ -6,23 +6,17 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <ul class="tg-header__top-info list-wrap">
-                        <li><i class="flaticon-pin"></i>
-                            <span>463 7th Ave, NY 10018, USA</span>
+                        <li><img src="{{ asset('images/location.webp') }}" alt="Location" style="width: 16px; height: 16px; margin-right: 5px;">
+                            <span>The Odyssey Building, 84 Muthithi Road, Westlands, Nairobi</span>
                         </li>
-                        <li><i class="flaticon-email"></i>
-                            <a href="mailto:info@gmail.com">info@gmail.com</a>
+                        <li><img src="{{ asset('images/email.png') }}" alt="Email" style="width: 16px; height: 16px; margin-right: 5px;">
+                            <a href="mailto:info@gmail.com">info@ict-a.com</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="tg-header__top-social list-wrap">
-                        <li>Follow Us On :</li>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li>Your Trusted ICT Solutions Partner</li>
                     </ul>
                 </div>
             </div>
@@ -51,13 +45,14 @@
                                         Categories
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="{{ route('courses') }}" class="nav-links">Business</a></li>
-                                        <li class="nav-item"><a href="{{ route('courses') }}" class="nav-links">Design</a></li>
-                                        <li class="nav-item"><a href="{{ route('courses') }}" class="nav-links">Development</a></li>
-                                        <li class="nav-item"><a href="{{ route('courses') }}" class="nav-links">JavaScript</a></li>
-                                        <li class="nav-item"><a href="{{ route('courses') }}" class="nav-links">Heath &amp; Fitness</a></li>
-                                        <li class="nav-item"><a href="{{ route('courses') }}" class="nav-links">Marketing</a></li>
-                                        <li class="nav-item"><a href="{{ route('courses') }}" class="nav-links">Photography</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'ict-audits') }}" class="nav-links">ICT Audits & IT Lifecycle Management</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'outsourced-ict-support') }}" class="nav-links">Outsourced ICT User Support</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'network-infrastructure') }}" class="nav-links">Network Infrastructure</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'cloud-services') }}" class="nav-links">Cloud Services</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'datacenter-solutions') }}" class="nav-links">Datacenter Solutions</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'security-systems') }}" class="nav-links">Security Systems</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'bulk-sms') }}" class="nav-links">Bulk SMS &amp; ERP Integration</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'software-solutions') }}" class="nav-links">Software Solutions</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -67,44 +62,52 @@
                                     <li class="menu-item {{ request()->routeIs('home') ? 'active' : '' }}">
                                         <a href="{{ route('home') }}" class="nav-links">Home</a>
                                     </li>
-                                    <li class="menu-item has-dropdown {{ request()->routeIs('courses*') ? 'active' : '' }}">
-                                        <a href="{{ route('courses') }}" class="nav-links">Courses</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="{{ route('courses') }}" class="dropdown-items">All Courses</a></li>
-                                        </ul>
+                                    <li class="menu-item">
+                                        <a href="{{ route('home') }}#about" class="nav-links">About Us</a>
                                     </li>
-                                    <li class="menu-item has-dropdown {{ request()->routeIs('about') || request()->routeIs('contact') ? 'active' : '' }}">
-                                        <a href="#" class="nav-links">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="{{ route('about') }}" class="dropdown-items">About Us</a></li>
-                                            <li><a href="{{ route('contact') }}" class="dropdown-items">Contact</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item {{ request()->routeIs('blog*') ? 'active' : '' }}">
-                                        <a href="{{ route('blog') }}" class="nav-links">Services</a>
+                                    <li class="menu-item">
+                                        <a href="{{ route('home') }}#services" class="nav-links">Services</a>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="tgmenu__search-bar">
-                                <form action="{{ route('courses') }}" method="get">
-                                    <input type="text" value="" name="s" class="search-course-input" placeholder="Search For Course . . ." />
-                                    <button type="submit"><i class="flaticon-searching"></i></button>
-                                </form>
+                                <div class="service-search-wrapper">
+                                    <input type="text" id="serviceSearchInput" class="service-search-input" placeholder="Search Services" autocomplete="off">
+                                    <i class="fas fa-search search-icon"></i>
+                                    <ul class="service-search-dropdown" id="serviceSearchDropdown">
+                                        <li class="service-item" data-name="ICT Audits & IT Lifecycle Management">
+                                            <a href="{{ route('service.show', 'ict-audits') }}">ICT Audits & IT Lifecycle Management</a>
+                                        </li>
+                                        <li class="service-item" data-name="Outsourced ICT User Support">
+                                            <a href="{{ route('service.show', 'outsourced-ict-support') }}">Outsourced ICT User Support</a>
+                                        </li>
+                                        <li class="service-item" data-name="Network Infrastructure">
+                                            <a href="{{ route('service.show', 'network-infrastructure') }}">Network Infrastructure</a>
+                                        </li>
+                                        <li class="service-item" data-name="Cloud Services">
+                                            <a href="{{ route('service.show', 'cloud-services') }}">Cloud Services</a>
+                                        </li>
+                                        <li class="service-item" data-name="Datacenter Solutions">
+                                            <a href="{{ route('service.show', 'datacenter-solutions') }}">Datacenter Solutions</a>
+                                        </li>
+                                        <li class="service-item" data-name="Security Systems">
+                                            <a href="{{ route('service.show', 'security-systems') }}">Security Systems</a>
+                                        </li>
+                                        <li class="service-item" data-name="Bulk SMS & ERP Integration">
+                                            <a href="{{ route('service.show', 'bulk-sms') }}">Bulk SMS &amp; ERP Integration</a>
+                                        </li>
+                                        <li class="service-item" data-name="Software Solutions">
+                                            <a href="{{ route('service.show', 'software-solutions') }}">Software Solutions</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="tgmenu__action">
                                 <ul class="list-wrap">
-                                    <li class="mini-cart-icon">
-                                        <a href="#" class="cart-count">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M18 6C18 4.4087 17.3679 2.88258 16.2426 1.75736C15.1174 0.632141 13.5913 0 12 0C10.4087 0 8.88258 0.632141 7.75736 1.75736C6.63214 2.88258 6 4.4087 6 6H0V21C0 21.7956 0.31607 22.5587 0.87868 23.1213C1.44129 23.6839 2.20435 24 3 24H21C21.7956 24 22.5587 23.6839 23.1213 23.1213C23.6839 22.5587 24 21.7956 24 21V6H18ZM12 2C13.0609 2 14.0783 2.42143 14.8284 3.17157C15.5786 3.92172 16 4.93913 16 6H8C8 4.93913 8.42143 3.92172 9.17157 3.17157C9.92172 2.42143 10.9391 2 12 2ZM22 21C22 21.2652 21.8946 21.5196 21.7071 21.7071C21.5196 21.8946 21.2652 22 21 22H3C2.73478 22 2.48043 21.8946 2.29289 21.7071C2.10536 21.5196 2 21.2652 2 21V8H6V10H8V8H16V10H18V8H22V21Z" fill="#5A7093" />
-                                            </svg>
-                                            <span class="mini-cart-count">0</span>
-                                        </a>
-                                    </li>
                                     <li class="header-btn">
-                                        <a href="#" class="btn">Sign Up</a>
+                                        <a href="{{ route('home') }}#contact" class="btn">Contact Us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -122,10 +125,36 @@
                             </div>
 
                             <div class="tgmobile__search">
-                                <form method="get" action="{{ route('courses') }}">
-                                    <input type="text" name="s" value="" placeholder="Search here...">
-                                    <button type="submit"><i class="fas fa-search"></i></button>
-                                </form>
+                                <div class="service-search-wrapper mobile-search">
+                                    <input type="text" id="mobileServiceSearchInput" class="service-search-input" placeholder="Search Services" autocomplete="off">
+                                    <i class="fas fa-search search-icon"></i>
+                                    <ul class="service-search-dropdown" id="mobileServiceSearchDropdown">
+                                        <li class="service-item" data-name="ICT Audits & IT Lifecycle Management">
+                                            <a href="{{ route('service.show', 'ict-audits') }}">ICT Audits & IT Lifecycle Management</a>
+                                        </li>
+                                        <li class="service-item" data-name="Outsourced ICT User Support">
+                                            <a href="{{ route('service.show', 'outsourced-ict-support') }}">Outsourced ICT User Support</a>
+                                        </li>
+                                        <li class="service-item" data-name="Network Infrastructure">
+                                            <a href="{{ route('service.show', 'network-infrastructure') }}">Network Infrastructure</a>
+                                        </li>
+                                        <li class="service-item" data-name="Cloud Services">
+                                            <a href="{{ route('service.show', 'cloud-services') }}">Cloud Services</a>
+                                        </li>
+                                        <li class="service-item" data-name="Datacenter Solutions">
+                                            <a href="{{ route('service.show', 'datacenter-solutions') }}">Datacenter Solutions</a>
+                                        </li>
+                                        <li class="service-item" data-name="Security Systems">
+                                            <a href="{{ route('service.show', 'security-systems') }}">Security Systems</a>
+                                        </li>
+                                        <li class="service-item" data-name="Bulk SMS & ERP Integration">
+                                            <a href="{{ route('service.show', 'bulk-sms') }}">Bulk SMS &amp; ERP Integration</a>
+                                        </li>
+                                        <li class="service-item" data-name="Software Solutions">
+                                            <a href="{{ route('service.show', 'software-solutions') }}">Software Solutions</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="tgmobile__menu-outer">
@@ -135,7 +164,7 @@
                             <div class="tgmenu__action">
                                 <ul class="list-wrap">
                                     <li class="header-btn login-btn">
-                                        <a href="#" class="btn">Sign Up</a>
+                                        <a href="{{ route('home') }}#contact" class="btn">Contact Us</a>
                                     </li>
                                     <li class="header-btn">
                                         <a href="#" class="btn">Try For Free</a>

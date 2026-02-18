@@ -325,6 +325,708 @@
         width: 10%;
     }
 }
+
+/* Services scroll controls */
+.services-scroll-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.scroll-btn {
+    background: #2467ec;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(36, 103, 236, 0.2);
+}
+
+.scroll-btn:hover {
+    background: #1a4fb8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(36, 103, 236, 0.3);
+}
+
+.scroll-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 767.98px) {
+    .services-scroll-controls {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* Smooth scrolling for services carousel */
+.courses-slider-active {
+    padding: 0 10px;
+}
+
+.courses-slider-active .slick-slide {
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.courses-slider-active .slick-track {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Brand slider styling */
+.brand-slider-active .slick-slide {
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.brand__item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.brand__item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.brand__item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Service cards uniform height */
+.courses-slider-active .slick-track {
+    display: flex !important;
+    align-items: stretch;
+}
+
+.courses-slider-active .slick-slide {
+    height: auto;
+    display: flex;
+}
+
+.courses-slider-active .slick-slide > div {
+    display: flex;
+    width: 100%;
+}
+
+.courses-slider-active .col {
+    display: flex;
+    width: 100%;
+}
+
+.courses-slider-active .courses__item-two {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.courses-slider-active .courses__item-two-thumb {
+    flex-shrink: 0;
+}
+
+.courses-slider-active .courses__item-two-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.courses-slider-active .courses__item-two-content .title {
+    min-height: 3em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.courses-slider-active .courses__item-two-content p {
+    flex-grow: 1;
+}
+
+/* ================================================
+   MOBILE RESPONSIVE STYLES - DO NOT ALTER DESKTOP
+   ================================================ */
+
+/* Hero/Slider Section - Mobile Responsive */
+@media (max-width: 991.98px) {
+    .slider__item {
+        min-height: 500px !important;
+        padding: 80px 0 !important;
+    }
+    
+    .slider__content .sub-title {
+        font-size: 14px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .slider__content .title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .slider__content ul.list-wrap {
+        margin-bottom: 25px !important;
+    }
+    
+    .slider__content ul.list-wrap li {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .slider__item .top-shape,
+    .slider__item .bottom-shape {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .slider__item {
+        min-height: 450px !important;
+        padding: 60px 0 !important;
+    }
+    
+    .slider__content .sub-title {
+        font-size: 12px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .slider__content .title {
+        font-size: 26px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .slider__content ul.list-wrap li {
+        font-size: 13px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .slider__content .btn {
+        padding: 12px 25px !important;
+        font-size: 14px !important;
+    }
+    
+    /* Improve gradient overlay for mobile */
+    .slider__item::before {
+        width: 100% !important;
+        background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.9) 40%,
+            rgba(255, 255, 255, 0.7) 70%,
+            rgba(255, 255, 255, 0.3) 100%) !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .slider__item {
+        min-height: 400px !important;
+        padding: 40px 0 !important;
+    }
+    
+    .slider__content .sub-title {
+        font-size: 11px !important;
+    }
+    
+    .slider__content .title {
+        font-size: 22px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .slider__content ul.list-wrap li {
+        font-size: 12px !important;
+    }
+}
+
+/* Testimonial Cards - Enhanced Mobile Responsive */
+@media (max-width: 991.98px) {
+    .testimonial__item {
+        margin: 40px 50px !important;
+        padding: 30px 40px 50px !important;
+        border-radius: 30px !important;
+    }
+    
+    .testimonial__item p {
+        font-size: 15px !important;
+        margin: 0 15px !important;
+        line-height: 1.6 !important;
+    }
+    
+    .testimonial__avatar .name {
+        font-size: 18px !important;
+    }
+    
+    .testimonial-area-wrapper {
+        padding: 80px 0 90px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .testimonial__item {
+        margin: 20px 15px !important;
+        padding: 25px 20px 35px !important;
+        border-radius: 20px !important;
+        box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.08) !important;
+    }
+    
+    .testimonial__item p {
+        font-size: 14px !important;
+        margin: 0 10px !important;
+        line-height: 1.7 !important;
+    }
+    
+    .testimonial__quote img {
+        max-width: 35px !important;
+    }
+    
+    .testimonial__rating {
+        font-size: 14px !important;
+        margin: 0 0 12px !important;
+    }
+    
+    .testimonial__avatar .name {
+        font-size: 16px !important;
+        margin: 0 0 5px !important;
+    }
+    
+    .testimonial__avatar .designation {
+        font-size: 13px !important;
+    }
+    
+    .testimonial-area-wrapper {
+        padding: 60px 0 70px !important;
+    }
+    
+    .testimonial-area-wrapper .section__title .sub-title {
+        font-size: 14px !important;
+    }
+    
+    .testimonial-area-wrapper .section__title .title {
+        font-size: 26px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .testimonial__item {
+        margin: 15px 10px !important;
+        padding: 20px 15px 30px !important;
+    }
+    
+    .testimonial__item p {
+        font-size: 13px !important;
+        margin: 0 5px !important;
+    }
+    
+    .testimonial__quote {
+        margin: 0 0 15px !important;
+    }
+    
+    .testimonial__quote img {
+        max-width: 30px !important;
+    }
+    
+    .testimonial__avatar .name {
+        font-size: 15px !important;
+    }
+    
+    .testimonial__avatar .designation {
+        font-size: 12px !important;
+    }
+    
+    .testimonial-area-wrapper .section__title .title {
+        font-size: 22px !important;
+    }
+}
+
+/* Header - Mobile Responsive Enhancements */
+
+/* Mobile Navigation Toggler - Hamburger Menu Icon */
+.mobile-nav-toggler {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #2467ec;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-toggler:hover {
+    background: #1a4fb8;
+}
+
+.mobile-nav-toggler i {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+@media (max-width: 1199.98px) {
+    .mobile-nav-toggler {
+        display: flex !important;
+    }
+    
+    /* Hide desktop navigation on mobile */
+    .tgmenu__navbar-wrap {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .mobile-nav-toggler {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .mobile-nav-toggler i {
+        font-size: 18px;
+    }
+    
+    .tg-header__top-info span,
+    .tg-header__top-info a {
+        font-size: 12px !important;
+    }
+    
+    .tg-header__top-social {
+        font-size: 12px !important;
+    }
+    
+    /* Adjust header layout for mobile */
+    .tgmenu__wrap {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    /* Hide search bar and contact button on small tablets, show in mobile menu */
+    .tgmenu__search-bar,
+    .tgmenu__action {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mobile-nav-toggler {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .mobile-nav-toggler i {
+        font-size: 16px;
+    }
+    
+    .tg-header__top {
+        padding: 8px 0 !important;
+    }
+    
+    .tg-header__top-info li {
+        margin-right: 10px !important;
+    }
+    
+    .tg-header__top-info span,
+    .tg-header__top-info a {
+        font-size: 11px !important;
+    }
+    
+    .tg-header__top-info img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+    
+    /* Logo sizing for mobile */
+    .logo img {
+        max-width: 120px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .mobile-nav-toggler {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .mobile-nav-toggler i {
+        font-size: 15px;
+    }
+    
+    .tg-header__top-info span {
+        display: inline-block !important;
+        max-width: 180px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+    
+    /* Logo sizing for small mobile */
+    .logo img {
+        max-width: 100px !important;
+    }
+}
+
+/* Mobile Menu Styles */
+.tgmobile__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 9999;
+    transition: all 0.4s ease-in-out;
+    overflow-y: auto;
+}
+
+.tgmobile__menu.mobile-menu-visible {
+    right: 0;
+}
+
+.tgmobile__menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.tgmobile__menu-backdrop.mobile-menu-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tgmobile__menu-box {
+    padding: 20px;
+}
+
+.tgmobile__menu .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tgmobile__menu .close-btn:hover {
+    background: #2467ec;
+    color: #ffffff;
+}
+
+.tgmobile__menu .close-btn i {
+    font-size: 16px;
+}
+
+.tgmobile__menu .nav-logo {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.tgmobile__search {
+    margin-bottom: 20px;
+}
+
+.tgmobile__menu-outer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tgmobile__menu-outer ul li {
+    margin-bottom: 10px;
+}
+
+.tgmobile__menu-outer ul li a {
+    display: block;
+    padding: 12px 15px;
+    color: #333;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.tgmobile__menu-outer ul li a:hover {
+    background: #f5f5f5;
+    color: #2467ec;
+    padding-left: 20px;
+}
+
+.tgmobile__menu .tgmenu__action {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.tgmobile__menu .tgmenu__action .list-wrap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tgmobile__menu .tgmenu__action .list-wrap li {
+    margin-bottom: 10px;
+}
+
+.tgmobile__menu .social-links {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.tgmobile__menu .social-links ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tgmobile__menu .social-links ul li a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 50%;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.tgmobile__menu .social-links ul li a:hover {
+    background: #2467ec;
+    color: #ffffff;
+}
+
+/* Section Titles - Mobile Responsive */
+@media (max-width: 767.98px) {
+    .section__title .title {
+        font-size: 26px !important;
+        line-height: 1.3 !important;
+    }
+    
+    .section__title .sub-title {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section__title .title {
+        font-size: 22px !important;
+    }
+    
+    .section__title .sub-title {
+        font-size: 12px !important;
+    }
+}
+
+/* ================================================
+   TABLET RESPONSIVE - iPad Mini & Similar Devices
+   iPad Mini: 768px x 1024px (Portrait)
+   ================================================ */
+
+/* Mission, Vision & Values Section - Tablet Optimization */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Stack Mission/Vision/Values in single column for better readability on tablets */
+    .features-area .row .col-lg-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .features__item {
+        max-width: 600px !important;
+        margin: 0 auto !important;
+    }
+    
+    .features__item h4.title {
+        font-size: 20px !important;
+    }
+    
+    .features__item p,
+    .features__item ul li {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+    
+    .features__icon img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+/* Alternative: 2-column layout for tablets in landscape or larger tablets */
+@media (min-width: 900px) and (max-width: 991.98px) {
+    .features-area .row .col-lg-4 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .features__item {
+        max-width: 100% !important;
+    }
+}
+
+/* Services Section - Tablet Responsive */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .courses-area {
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+    }
+    
+    /* Ensure proper spacing for service cards on tablets */
+    .courses__item-two {
+        margin-bottom: 20px !important;
+    }
+    
+    .courses__item-two-content .title {
+        font-size: 18px !important;
+    }
+    
+    .courses__item-two-content p {
+        font-size: 14px !important;
+    }
+}
+
+/* Statistics/Facts Section - Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .fact__item-two .fact__content .title {
+        font-size: 32px !important;
+    }
+    
+    .fact__icon-two img {
+        max-width: 50px !important;
+    }
+}
+
 </style>
 @endpush
 
@@ -338,21 +1040,21 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-8">
                         <div class="slider__content">
-                            <span class="sub-title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="0.8">Any Time, Any Where To Do Discover Courses</span>
-                            <h2 class="title tg-svg" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="0.8">Find The Best Suitable <span class="position-relative"><span class="svg-icon" id="slider-0" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Courses</span> From Here</h2>
+                            <span class="sub-title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="0.8">Professional ICT Solutions Provider</span>
+                            <h2 class="title tg-svg" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="0.8">Expert ICT Solutions <span class="position-relative"><span class="svg-icon" id="slider-0" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Across</span> East Africa</h2>
                             <ul class="list-wrap" data-animation-in="slideInLeft" data-delay-in=".4" data-duration-in="0.8">
-                                <li><i class="fas fa-check-circle"></i>You can access 7,900+ different courses</li>
-                                <li><i class="fas fa-check-circle"></i>Lifetime Access For All</li>
+                                <li><i class="fas fa-check-circle"></i>Comprehensive IT Infrastructure & Support Services</li>
+                                <li><i class="fas fa-check-circle"></i>Trusted by 500+ Organizations Across East Africa</li>
                             </ul>
                             <div class="tg-button-wrap" data-animation-in="slideInLeft" data-delay-in=".5" data-duration-in="0.8">
-                                <a href="{{ route('courses') }}" class="btn tg-svg"><span class="text">Explore Courses</span> <span class="svg-icon" id="slider-btn01-0" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
+                                <a href="#services" class="btn tg-svg"><span class="text">Our Services</span> <span class="svg-icon" id="slider-btn01-0" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <img decoding="async" src="{{ asset('uploads/2023/07/categories_shape02.png') }}" alt="shape" width="108" class="top-shape" data-animation-in="slideInDown" data-delay-in=".6" data-duration-in="0.8">
-            <img decoding="async" src="{{ asset('uploads/2023/07/slider_shape.png') }}" alt="shape" class="bottom-shape" data-animation-in="slideInLeft" data-delay-in=".6" data-duration-in="0.8">
+            <img decoding="async" src="{{ asset('uploads/2023/07/categories_shape02.png') }}" alt="shape" width="108" class="top-shape" data-animation-in="slideInDown" data-delay-in=".6" data-duration-in="0.8" loading="lazy">
+            <img decoding="async" src="{{ asset('uploads/2023/07/slider_shape.png') }}" alt="shape" class="bottom-shape" data-animation-in="slideInLeft" data-delay-in=".6" data-duration-in="0.8" loading="lazy">
         </div>
         <!-- Slide 2 -->
         <div class="slider__item d-flex" style="background-image:url({{ asset('images/hero2.jpg') }})">
@@ -360,14 +1062,14 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-8">
                         <div class="slider__content">
-                            <span class="sub-title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="0.8">Any Time, Any Where To Do Discover Courses</span>
-                            <h2 class="title tg-svg" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="0.8">Find The Best Suitable <span class="position-relative"><span class="svg-icon" id="slider-1" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Courses</span> From Here</h2>
+                            <span class="sub-title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="0.8">Transform Your Business with Technology</span>
+                            <h2 class="title tg-svg" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="0.8">Innovative IT Solutions <span class="position-relative"><span class="svg-icon" id="slider-1" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>For Your</span> Organization</h2>
                             <ul class="list-wrap" data-animation-in="slideInLeft" data-delay-in=".4" data-duration-in="0.8">
-                                <li><i class="fas fa-check-circle"></i>You can access 7,900+ different courses</li>
-                                <li><i class="fas fa-check-circle"></i>Lifetime Access For All</li>
+                                <li><i class="fas fa-check-circle"></i>Cloud Services, Security Systems & Network Infrastructure</li>
+                                <li><i class="fas fa-check-circle"></i>24/7 Technical Support & Expert Consultancy</li>
                             </ul>
                             <div class="tg-button-wrap" data-animation-in="slideInLeft" data-delay-in=".5" data-duration-in="0.8">
-                                <a href="{{ route('courses') }}" class="btn tg-svg"><span class="text">Explore Courses</span> <span class="svg-icon" id="slider-btn01-1" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
+                                <a href="#services" class="btn tg-svg"><span class="text">Our Services</span> <span class="svg-icon" id="slider-btn01-1" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
                             </div>
                         </div>
                     </div>
@@ -382,14 +1084,14 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-8">
                         <div class="slider__content">
-                            <span class="sub-title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="0.8">Any Time, Any Where To Do Discover Courses</span>
-                            <h2 class="title tg-svg" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="0.8">Find The Best Suitable <span class="position-relative"><span class="svg-icon" id="slider-2" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Courses</span> From Here</h2>
+                            <span class="sub-title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="0.8">Leading ICT Solutions Provider in East Africa</span>
+                            <h2 class="title tg-svg" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="0.8">Driving Digital <span class="position-relative"><span class="svg-icon" id="slider-2" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Transformation</span> For Businesses</h2>
                             <ul class="list-wrap" data-animation-in="slideInLeft" data-delay-in=".4" data-duration-in="0.8">
-                                <li><i class="fas fa-check-circle"></i>You can access 7,900+ different courses</li>
-                                <li><i class="fas fa-check-circle"></i>Lifetime Access For All</li>
+                                <li><i class="fas fa-check-circle"></i>ICT Audits, Datacenter Solutions & Software Development</li>
+                                <li><i class="fas fa-check-circle"></i>Partnering with Microsoft, VMware, Cisco & More</li>
                             </ul>
                             <div class="tg-button-wrap" data-animation-in="slideInLeft" data-delay-in=".5" data-duration-in="0.8">
-                                <a href="{{ route('courses') }}" class="btn tg-svg"><span class="text">Explore Courses</span> <span class="svg-icon" id="slider-btn01-2" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
+                                <a href="#services" class="btn tg-svg"><span class="text">Our Services</span> <span class="svg-icon" id="slider-btn01-2" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
                             </div>
                         </div>
                     </div>
@@ -402,35 +1104,8 @@
 </section>
 <!-- slider-area-end -->
 
-<!-- quick-action-area -->
-<section class="quick-action-area pt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <x-hero-card 
-                    title="Expert ICT Solutions Across East Africa"
-                    buttonText="Get Started"
-                    link="{{ route('contact') }}"
-                    image="images/pc.png"
-                />
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="quick__action-item" style="background-image:url({{ asset('uploads/2023/07/quick_action02.jpg') }})">
-                    <div class="quick__action-content">
-                        <h4 class="title">Transform Your Business with Digital Innovation</h4>
-                        <div class="tg-button-wrap">
-                            <a href="{{ route('blog') }}" class="btn white-btn tg-svg"><span class="text">Explore Services</span> <span class="svg-icon" id="reg-btn-2" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- quick-action-area-end -->
-
 <!-- services-area -->
-<section class="courses-area section-py-120">
+<section id="services" class="courses-area" style="padding-top: 120px; padding-bottom: 60px;">
     <div class="container">
         <div class="row align-items-center mb-4">
             <div class="col-lg-6">
@@ -441,22 +1116,30 @@
             </div>
             <div class="col-lg-6">
                 <div class="tg-button-wrap mt-4 mt-lg-0 justify-content-center justify-content-lg-end">
-                    <a href="{{ route('blog') }}" class="btn btn-border tg-svg"><span class="text">View All Services</span> <span class="svg-icon" id="svg-all-courses" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
+                    <div class="services-scroll-controls">
+                        <button type="button" class="scroll-btn scroll-prev" onclick="scrollServices('prev')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <button type="button" class="scroll-btn scroll-next" onclick="scrollServices('next')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="row courses-slider-active">
+        <div class="row courses-slider-active" id="servicesSlider" style="overflow-x: hidden; scroll-behavior: smooth;">
             @foreach($courses ?? [] as $course)
             <div class="col">
                 <div class="courses__item-two shine__animate-item">
                     <div class="courses__item-two-thumb">
                         <a href="{{ $course['url'] ?? '#' }}" class="shine__animate-link">
-                            <img src="{{ $course['image'] ?? asset('uploads/2019/05/courses01.jpg') }}" alt="{{ $course['title'] ?? 'Course' }}" />
+                            <img src="{{ $course['image'] ?? asset('uploads/2019/05/courses01.jpg') }}" alt="{{ $course['title'] ?? 'Course' }}" loading="lazy" />
                         </a>
                         <div class="author">
                             <a href="#">
-                                <img alt='Author' src='{{ asset('uploads/2023/07/author_img.png') }}' class='avatar avatar-32 photo' height='32' width='32' />
+                                <img alt='Author' src='{{ asset('uploads/2023/07/author_img.png') }}' class='avatar avatar-32 photo' height='32' width='32' loading="lazy" />
                             </a>
                         </div>
                     </div>
@@ -485,60 +1168,170 @@
             @endforeach
             
             @if(empty($courses))
-            <!-- Static service items -->
+            <!-- ========================================
+                 SERVICE 1: ICT AUDITS & IT LIFECYCLE MANAGEMENT
+                 Route: ict-audits
+                 Image: uploads/2023/06/ict.jpg
+                 Category: IT Audit
+            ========================================= -->
             <div class="col">
                 <div class="courses__item-two shine__animate-item">
                     <div class="courses__item-two-thumb">
-                        <a href="{{ route('service.show', 'ict-training') }}" class="shine__animate-link">
-                            <img src="{{ asset('uploads/2023/06/ict.jpg') }}" alt="ICT Training" />
+                        <a href="{{ route('service.show', 'ict-audits') }}" class="shine__animate-link">
+                            <img src="{{ asset('uploads/2023/06/ict.jpg') }}" alt="ICT audits and IT lifecycle management" />
                         </a>
                     </div>
                     <div class="courses__item-two-content">
-                        <div class="courses__item-categories"><a href="#">Training</a></div>
-                        <h5 class="title"><a href="{{ route('service.show', 'ict-training') }}">ICT Training & Capacity Building</a></h5>
-                        <p class="text-muted small">Professional development programs, certifications & skills training for organizations.</p>
+                        <div class="courses__item-categories"><a href="#">IT Audit</a></div>
+                        <h5 class="title"><a href="{{ route('service.show', 'ict-audits') }}">ICT audits and IT lifecycle management</a></h5>
+                        <p class="text-muted small">IT audit services examining and evaluating organization's information technology infrastructure, policies and operations.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- ========================================
+                 SERVICE 2: OUTSOURCED ICT USER SUPPORT
+                 Route: outsourced-ict-support
+                 Image: uploads/2023/06/IT training.jpg
+                 Category: Support
+            ========================================= -->
             <div class="col">
                 <div class="courses__item-two shine__animate-item">
                     <div class="courses__item-two-thumb">
-                        <a href="{{ route('service.show', 'software-development') }}" class="shine__animate-link">
-                            <img src="{{ asset('uploads/2023/06/software development.jpg') }}" alt="Software Development" />
+                        <a href="{{ route('service.show', 'outsourced-ict-support') }}" class="shine__animate-link">
+                            <img src="{{ asset('uploads/2023/06/IT training.jpg') }}" alt="Outsourced ICT user support" />
                         </a>
                     </div>
                     <div class="courses__item-two-content">
-                        <div class="courses__item-categories"><a href="#">Development</a></div>
-                        <h5 class="title"><a href="{{ route('service.show', 'software-development') }}">Software Development</a></h5>
-                        <p class="text-muted small">Custom software, web applications, mobile apps & enterprise solutions.</p>
+                        <div class="courses__item-categories"><a href="#">Support</a></div>
+                        <h5 class="title"><a href="{{ route('service.show', 'outsourced-ict-support') }}">Outsourced ICT user support</a></h5>
+                        <p class="text-muted small">Flexible first and second lines of IT helpdesk response whether on-premise or remotely based on ITIL framework.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- ========================================
+                 SERVICE 3: NETWORK INFRASTRUCTURE
+                 Route: network-infrastructure
+                 Image: images/internet1.jpg
+                 Category: Infrastructure
+            ========================================= -->
             <div class="col">
                 <div class="courses__item-two shine__animate-item">
                     <div class="courses__item-two-thumb">
-                        <a href="{{ route('service.show', 'it-infrastructure') }}" class="shine__animate-link">
-                            <img src="{{ asset('uploads/2023/06/IT training.jpg') }}" alt="IT Infrastructure" />
+                        <a href="{{ route('service.show', 'network-infrastructure') }}" class="shine__animate-link">
+                            <img src="{{ asset('images/internet1.jpg') }}" alt="Network Infrastructure" />
                         </a>
                     </div>
                     <div class="courses__item-two-content">
                         <div class="courses__item-categories"><a href="#">Infrastructure</a></div>
-                        <h5 class="title"><a href="{{ route('service.show', 'it-infrastructure') }}">IT Infrastructure Solutions</a></h5>
-                        <p class="text-muted small">Network design, server setup, cloud migration & system integration.</p>
+                        <h5 class="title"><a href="{{ route('service.show', 'network-infrastructure') }}">Network Infrastructure</a></h5>
+                        <p class="text-muted small">Complete networking solutions on structured cabling and corporate wireless systems providing comprehensive telecommunication infrastructure.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- ========================================
+                 SERVICE 4: CLOUD SERVICES
+                 Route: cloud-services
+                 Image: uploads/2023/06/software development.jpg
+                 Category: Cloud
+            ========================================= -->
             <div class="col">
                 <div class="courses__item-two shine__animate-item">
                     <div class="courses__item-two-thumb">
-                        <a href="{{ route('service.show', 'cyber-security') }}" class="shine__animate-link">
-                            <img src="{{ asset('uploads/2023/06/cyber.jpg') }}" alt="Cyber Security" />
+                        <a href="{{ route('service.show', 'cloud-services') }}" class="shine__animate-link">
+                            <img src="{{ asset('uploads/2023/06/software development.jpg') }}" alt="Cloud services" />
+                        </a>
+                    </div>
+                    <div class="courses__item-two-content">
+                        <div class="courses__item-categories"><a href="#">Cloud</a></div>
+                        <h5 class="title"><a href="{{ route('service.show', 'cloud-services') }}">Cloud services for email, collaboration and file sharing</a></h5>
+                        <p class="text-muted small">Cloud services for email & collaboration, application deployment, backup services and artificial intelligence across major cloud providers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 SERVICE 5: DATACENTER SOLUTIONS
+                 Route: datacenter-solutions
+                 Image: uploads/2023/06/IT training.jpg
+                 Category: Datacenter
+            ========================================= -->
+            <div class="col">
+                <div class="courses__item-two shine__animate-item">
+                    <div class="courses__item-two-thumb">
+                        <a href="{{ route('service.show', 'datacenter-solutions') }}" class="shine__animate-link">
+                            <img src="{{ asset('uploads/2023/06/IT training.jpg') }}" alt="Datacenter solutions" />
+                        </a>
+                    </div>
+                    <div class="courses__item-two-content">
+                        <div class="courses__item-categories"><a href="#">Datacenter</a></div>
+                        <h5 class="title"><a href="{{ route('service.show', 'datacenter-solutions') }}">Datacenter solutions</a></h5>
+                        <p class="text-muted small">Mission critical support for key installations covering virtualization, security and firewalls and enterprise backup.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 SERVICE 6: SECURITY SYSTEMS
+                 Route: security-systems
+                 Image: uploads/2023/06/cyber.jpg
+                 Category: Security
+            ========================================= -->
+            <div class="col">
+                <div class="courses__item-two shine__animate-item">
+                    <div class="courses__item-two-thumb">
+                        <a href="{{ route('service.show', 'security-systems') }}" class="shine__animate-link">
+                            <img src="{{ asset('uploads/2023/06/cyber.jpg') }}" alt="SECURITY SYSTEMS" />
                         </a>
                     </div>
                     <div class="courses__item-two-content">
                         <div class="courses__item-categories"><a href="#">Security</a></div>
-                        <h5 class="title"><a href="{{ route('service.show', 'cyber-security') }}">Cyber Security Services</a></h5>
-                        <p class="text-muted small">Security assessments, network protection & compliance solutions.</p>
+                        <h5 class="title"><a href="{{ route('service.show', 'security-systems') }}">SECURITY SYSTEMS</a></h5>
+                        <p class="text-muted small">Big Brother service, Covid-19 safety checks, PPE Hakikisha, Resource optimization, Critical Assets KPI's, CCTV Audits, Crime prevention and investigation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 SERVICE 7: BULK SMS & ERP INTEGRATION
+                 Route: bulk-sms
+                 Image: images/sms.jpg
+                 Category: Messaging
+            ========================================= -->
+            <div class="col">
+                <div class="courses__item-two shine__animate-item">
+                    <div class="courses__item-two-thumb">
+                        <a href="{{ route('service.show', 'bulk-sms') }}" class="shine__animate-link">
+                            <img src="{{ asset('images/sms.jpg') }}" alt="Bulk SMS and Integration to ERP" />
+                        </a>
+                    </div>
+                    <div class="courses__item-two-content">
+                        <div class="courses__item-categories"><a href="#">Messaging</a></div>
+                        <h5 class="title"><a href="{{ route('service.show', 'bulk-sms') }}">Bulk SMS and Integration to ERP</a></h5>
+                        <p class="text-muted small">Automated messaging system delivering recorded voice or text messages to multiple phones automatically with ERP integration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================================
+                 SERVICE 8: SOFTWARE SOLUTIONS
+                 Route: software-solutions
+                 Image: uploads/2023/06/software development.jpg
+                 Category: Software
+            ========================================= -->
+            <div class="col">
+                <div class="courses__item-two shine__animate-item">
+                    <div class="courses__item-two-thumb">
+                        <a href="{{ route('service.show', 'software-solutions') }}" class="shine__animate-link">
+                            <img src="{{ asset('uploads/2023/06/software development.jpg') }}" alt="Software solutions" />
+                        </a>
+                    </div>
+                    <div class="courses__item-two-content">
+                        <div class="courses__item-categories"><a href="#">Software</a></div>
+                        <h5 class="title"><a href="{{ route('service.show', 'software-solutions') }}">Software solutions</a></h5>
+                        <p class="text-muted small">Mgeni VMS (visitor management), Orodha (checklist automation), Easy Sign (employee attendance), Workflow (automated system flows).</p>
                     </div>
                 </div>
             </div>
@@ -549,7 +1342,7 @@
 <!-- courses-area-end -->
 
 <!-- fact-area -->
-<section class="fact-area section-py-120" style="background-color: #f7f7f7;">
+<section class="fact-area" style="background-color: #f7f7f7; padding-top: 60px; padding-bottom: 120px;">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
@@ -564,7 +1357,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="fact__item-two text-center">
                     <div class="fact__icon-two">
-                        <img decoding="async" src="{{ asset('images/icons/icon-1.png') }}" alt="Clients Icon">
+                        <img decoding="async" src="{{ asset('images/icons/icon-1.png') }}" alt="Clients Icon" loading="lazy">
                     </div>
                     <div class="fact__content-two">
                         <h3 class="count"><span class="odometer" data-count="500">0</span>+</h3>
@@ -575,7 +1368,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="fact__item-two text-center">
                     <div class="fact__icon-two">
-                        <img decoding="async" src="{{ asset('images/icons/icon-4.png') }}" alt="Projects Icon">
+                        <img decoding="async" src="{{ asset('images/icons/icon-4.png') }}" alt="Projects Icon" loading="lazy">
                     </div>
                     <div class="fact__content-two">
                         <h3 class="count"><span class="odometer" data-count="1200">0</span>+</h3>
@@ -586,7 +1379,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="fact__item-two text-center">
                     <div class="fact__icon-two">
-                        <img decoding="async" src="{{ asset('images/icons/icon-1.png') }}" alt="Professionals Icon">
+                        <img decoding="async" src="{{ asset('images/icons/icon-1.png') }}" alt="Professionals Icon" loading="lazy">
                     </div>
                     <div class="fact__content-two">
                         <h3 class="count"><span class="odometer" data-count="50">0</span>+</h3>
@@ -597,7 +1390,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="fact__item-two text-center">
                     <div class="fact__icon-two">
-                        <img decoding="async" src="{{ asset('images/icons/icon-4.png') }}" alt="Experience Icon">
+                        <img decoding="async" src="{{ asset('images/icons/icon-4.png') }}" alt="Experience Icon" loading="lazy">
                     </div>
                     <div class="fact__content-two">
                         <h3 class="count"><span class="odometer" data-count="15">0</span>+</h3>
@@ -610,98 +1403,9 @@
 </section>
 <!-- fact-area-end -->
 
-<!-- products-area -->
-<section class="categories-area section-py-120">
-    <div class="container">
-        <div class="row align-items-center mb-4">
-            <div class="col-lg-6">
-                <div class="section__title text-left">
-                    <span class="sub-title">Our Innovative Solutions</span>
-                    <h2 class="title tg-svg">Explore Our <span class="position-relative"><span class="svg-icon" id="svg-categories" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Products</span></h2>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="tg-button-wrap mt-4 mt-lg-0 justify-content-center justify-content-lg-end">
-                    <a href="#" class="btn btn-border tg-svg"><span class="text">All Products</span> <span class="svg-icon" id="svg-all-cat" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="products-slider-active">
-            <div class="categories__item-three">
-                <a href="#">
-                    <div class="thumb">
-                        <img decoding="async" src="{{ asset('images/mgeni.jpg') }}" alt="Mgeni App">
-                    </div>
-                    <div class="info">
-                        <div class="list"><span class="courses">Event Management</span></div>
-                        <div class="list"><span class="name">Mgeni App</span></div>
-                    </div>
-                </a>
-            </div>
-            <div class="categories__item-three">
-                <a href="#">
-                    <div class="thumb">
-                        <img decoding="async" src="{{ asset('images/easysign.jpg') }}" alt="Easy Sign App">
-                    </div>
-                    <div class="info">
-                        <div class="list"><span class="courses">Digital Signature</span></div>
-                        <div class="list"><span class="name">Easy Sign App</span></div>
-                    </div>
-                </a>
-            </div>
-            <div class="categories__item-three">
-                <a href="#">
-                    <div class="thumb">
-                        <img decoding="async" src="{{ asset('images/workflow1.webp') }}" alt="Workflow">
-                    </div>
-                    <div class="info">
-                        <div class="list"><span class="courses">Process Automation</span></div>
-                        <div class="list"><span class="name">Workflow</span></div>
-                    </div>
-                </a>
-            </div>
-            <div class="categories__item-three">
-                <a href="#">
-                    <div class="thumb">
-                        <img decoding="async" src="{{ asset('images/mgeni.jpg') }}" alt="Mgeni App">
-                    </div>
-                    <div class="info">
-                        <div class="list"><span class="courses">Event Management</span></div>
-                        <div class="list"><span class="name">Mgeni App</span></div>
-                    </div>
-                </a>
-            </div>
-            <div class="categories__item-three">
-                <a href="#">
-                    <div class="thumb">
-                        <img decoding="async" src="{{ asset('images/easysign.jpg') }}" alt="Easy Sign App">
-                    </div>
-                    <div class="info">
-                        <div class="list"><span class="courses">Digital Signature</span></div>
-                        <div class="list"><span class="name">Easy Sign App</span></div>
-                    </div>
-                </a>
-            </div>
-            <div class="categories__item-three">
-                <a href="#">
-                    <div class="thumb">
-                        <img decoding="async" src="{{ asset('images/workflow1.webp') }}" alt="Workflow">
-                    </div>
-                    <div class="info">
-                        <div class="list"><span class="courses">Process Automation</span></div>
-                        <div class="list"><span class="name">Workflow</span></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- products-area-end -->
-
 <!-- cta-area -->
 <section class="cta-area-two position-relative">
-    <div class="cta__bg" style="background-image:url({{ asset('uploads/2023/07/cta_bg.jpg') }})"></div>
+    <div class="cta__bg" style="background-image:url({{ asset('uploads/2023/07/employees.jpg') }})"></div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-10">
@@ -717,12 +1421,96 @@
         </div>
     </div>
     <div class="cta__shapes">
-        <img src="{{ asset('uploads/2023/07/cta_shape001.svg') }}" alt="img" class="position-absolute" data-aos="fade-down-right" data-aos-delay="300">
-        <img src="{{ asset('uploads/2023/07/cta_shape002.png') }}" alt="img" class="position-absolute">
-        <img src="{{ asset('uploads/2023/07/cta_shape003.svg') }}" alt="img" class="position-absolute" data-aos="fade-up-left" data-aos-delay="300">
+        <img src="{{ asset('uploads/2023/07/cta_shape001.svg') }}" alt="img" class="position-absolute" data-aos="fade-down-right" data-aos-delay="300" loading="lazy">
+        <img src="{{ asset('uploads/2023/07/cta_shape002.png') }}" alt="img" class="position-absolute" loading="lazy">
+        <img src="{{ asset('uploads/2023/07/cta_shape003.svg') }}" alt="img" class="position-absolute" data-aos="fade-up-left" data-aos-delay="300" loading="lazy">
     </div>
 </section>
 <!-- cta-area-end -->
+
+<!-- about-area -->
+<section id="about" class="section-py-120">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="about__title-wrap">
+                    <div class="section__title">
+                        <span class="sub-title">Who we are</span>
+                        <h2 class="title tg-svg">Your Trusted <span class="position-relative"><span class="svg-icon" id="about-svg-1" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Partner</span> In Technology Solutions</h2>
+                    </div>
+                    <p class="fw-medium">ICT Africa is a leading information and communication technology company dedicated to providing innovative solutions that drive digital transformation across Africa.</p>
+                    <p>With years of experience and a team of highly skilled professionals, we specialize in delivering comprehensive ICT services including software development, IT infrastructure, cybersecurity, training, and consultancy. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses and organizations seeking to leverage technology for growth and efficiency.</p>
+                    <div class="tg-button-wrap">
+                        <a href="#services" class="btn tg-svg"><span class="text">Our Services</span> <span class="svg-icon" id="about-btn" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="about__image text-center">
+                    <img decoding="async" src="{{ asset('uploads/2019/05/team.jpg') }}" alt="ICT Africa" style="max-width: 350px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-area-end -->
+
+<!-- mission-vision-values -->
+<section class="features-area section-py-120" style="background-color: #f7f7f7;">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <div class="section__title">
+                    <span class="sub-title">Our Foundation</span>
+                    <h2 class="title tg-svg">Mission, Vision <span class="position-relative"><span class="svg-icon" id="svg-mvv" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>& Values</span></h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="features__item" style="background: #fff; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div class="features__icon" style="margin-bottom: 20px;">
+                        <img src="{{ asset('images/mission.png') }}" alt="Mission" style="width: 80px; height: 80px; object-fit: contain;" loading="lazy">
+                    </div>
+                    <div class="features__content">
+                        <h4 class="title" style="margin-bottom: 15px; color: #161439;">Our Mission</h4>
+                        <p>To empower businesses and individuals across Africa with cutting-edge technology solutions that enhance productivity, foster innovation, and drive sustainable growth. We are committed to delivering exceptional ICT services that transform challenges into opportunities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="features__item" style="background: #fff; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div class="features__icon" style="margin-bottom: 20px;">
+                        <img src="{{ asset('images/vision.png') }}" alt="Vision" style="width: 80px; height: 80px; object-fit: contain;" loading="lazy">
+                    </div>
+                    <div class="features__content">
+                        <h4 class="title" style="margin-bottom: 15px; color: #161439;">Our Vision</h4>
+                        <p>To be the leading ICT solutions provider in Africa, recognized for our innovation, reliability, and commitment to excellence. We envision a digitally empowered Africa where technology bridges gaps, creates opportunities, and transforms lives.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="features__item" style="background: #fff; padding: 30px; border-radius: 10px; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div class="features__icon" style="margin-bottom: 20px;">
+                        <img src="{{ asset('images/values.png') }}" alt="Values" style="width: 80px; height: 80px; object-fit: contain;" loading="lazy">
+                    </div>
+                    <div class="features__content">
+                        <h4 class="title" style="margin-bottom: 15px; color: #161439;">Our Values</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #5751E1; margin-right: 8px;"></i>Integrity & Transparency</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #5751E1; margin-right: 8px;"></i>Innovation & Excellence</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #5751E1; margin-right: 8px;"></i>Customer Focus</li>
+                            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #5751E1; margin-right: 8px;"></i>Collaboration & Teamwork</li>
+                            <li><i class="fas fa-check-circle" style="color: #5751E1; margin-right: 8px;"></i>Continuous Learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- mission-vision-values-end -->
 
 <!-- testimonial-area -->
 <div class="testimonial-area-wrapper">
@@ -732,7 +1520,7 @@
             <div class="col-lg-5 text-center">
                 <div class="section__title">
                     <span class="sub-title">Our Testimonials</span>
-                    <h2 class="title tg-svg">What's Our <span class="position-relative"><span class="svg-icon" id="svg-testi" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Students</span> Think</h2>
+                    <h2 class="title tg-svg">What Our <span class="position-relative"><span class="svg-icon" id="svg-testi" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Clients</span> Say</h2>
                 </div>
             </div>
         </div>
@@ -742,9 +1530,9 @@
             <!-- Left Column - Decorative Images -->
             <div class="col-lg-1 d-none d-lg-block">
                 <div class="testimonial-decorative-left">
-                    <img src="{{ asset('uploads/2023/07/testi01.png') }}" alt="testimonial" class="testi-deco-img-1" width="100" height="100">
-                    <img src="{{ asset('uploads/2023/07/testi02.png') }}" alt="testimonial" class="testi-deco-img-2" width="100" height="100">
-                    <img src="{{ asset('uploads/2023/07/testi03.png') }}" alt="testimonial" class="testi-deco-img-3" width="100" height="100">
+                    <img src="{{ asset('uploads/2023/07/person4.png') }}" alt="testimonial" class="testi-deco-img-1" width="100" height="100" loading="lazy">
+                    <img src="{{ asset('uploads/2023/07/person5.png') }}" alt="testimonial" class="testi-deco-img-2" width="100" height="100" loading="lazy">
+                    <img src="{{ asset('uploads/2023/07/person1.png') }}" alt="testimonial" class="testi-deco-img-3" width="100" height="100" loading="lazy">
                 </div>
             </div>
             
@@ -753,24 +1541,18 @@
                 <div class="testimonial-active">
                     <div class="testimonial__item">
                         <div class="testimonial__quote">
-                            <img src="{{ asset('images/theme/icons/quote02.png') }}" alt="quote">
+                            <img src="{{ asset('images/theme/icons/quote02.png') }}" alt="quote" loading="lazy">
                         </div>
-                        <div class="testimonial__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
+                        
                         <p>ICT Africa transformed our entire IT infrastructure. Their professional team delivered beyond our expectations, implementing a robust system that has significantly improved our operational efficiency. Highly recommended!</p>
                         <div class="testimonial__avatar">
                             <h4 class="name">Sarah Kamau</h4>
-                            <span class="designation">CEO, TechVision Kenya</span>
+                            <span class="designation">CEO, TechVisionEUR Kenya</span>
                         </div>
                     </div>
                     <div class="testimonial__item">
                         <div class="testimonial__quote">
-                            <img src="{{ asset('images/theme/icons/quote02.png') }}" alt="quote">
+                            <img src="{{ asset('images/theme/icons/quote02.png') }}" alt="quote" loading="lazy">
                         </div>
                         <div class="testimonial__rating">
                             <i class="fas fa-star"></i>
@@ -787,7 +1569,7 @@
                     </div>
                     <div class="testimonial__item">
                         <div class="testimonial__quote">
-                            <img src="{{ asset('images/theme/icons/quote02.png') }}" alt="quote">
+                            <img src="{{ asset('images/theme/icons/quote02.png') }}" alt="quote" loading="lazy">
                         </div>
                         <div class="testimonial__rating">
                             <i class="fas fa-star"></i>
@@ -808,9 +1590,9 @@
             <!-- Right Column - Decorative Images -->
             <div class="col-lg-1 d-none d-lg-block">
                 <div class="testimonial-decorative-right">
-                    <img src="{{ asset('uploads/2023/07/testi04.png') }}" alt="testimonial" class="testi-deco-img-4" width="100" height="100">
-                    <img src="{{ asset('uploads/2023/07/testi05.png') }}" alt="testimonial" class="testi-deco-img-5" width="100" height="100">
-                    <img src="{{ asset('uploads/2023/07/testi06.png') }}" alt="testimonial" class="testi-deco-img-6" width="100" height="100">
+                    <img src="{{ asset('uploads/2023/07/person1.png') }}" alt="testimonial" class="testi-deco-img-4" width="100" height="100" loading="lazy">
+                    <img src="{{ asset('uploads/2023/07/person2.png') }}" alt="testimonial" class="testi-deco-img-5" width="100" height="100" loading="lazy">
+                    <img src="{{ asset('uploads/2023/07/person3.png') }}" alt="testimonial" class="testi-deco-img-6" width="100" height="100" loading="lazy">
                 </div>
             </div>
         </div>
@@ -824,32 +1606,32 @@
         <div class="row brand-slider-active">
             <div class="col-12">
                 <div class="brand__item">
-                    <a href="#"><img src="{{ asset('uploads/2023/07/brand01.png') }}" alt="Brand"></a>
+                    <a href="#"><img src="{{ asset('uploads/2023/partners/tuff.png') }}" alt="Brand" loading="lazy"></a>
                 </div>
             </div>
             <div class="col-12">
                 <div class="brand__item">
-                    <a href="#"><img src="{{ asset('uploads/2023/07/brand02.png') }}" alt="Brand"></a>
+                    <a href="#"><img src="{{ asset('uploads/2023/partners/vet care logo.png') }}" alt="Brand" loading="lazy"></a>
                 </div>
             </div>
             <div class="col-12">
                 <div class="brand__item">
-                    <a href="#"><img src="{{ asset('uploads/2023/07/brand03.png') }}" alt="Brand"></a>
+                    <a href="#"><img src="{{ asset('uploads/2023/partners/apex steel logo.png') }}" alt="Brand" loading="lazy"></a>
                 </div>
             </div>
             <div class="col-12">
                 <div class="brand__item">
-                    <a href="#"><img src="{{ asset('uploads/2023/07/brand04.png') }}" alt="Brand"></a>
+                    <a href="#"><img src="{{ asset('uploads/2023/partners/pure hwalth logo.webp') }}" alt="Brand" loading="lazy"></a>
                 </div>
             </div>
             <div class="col-12">
                 <div class="brand__item">
-                    <a href="#"><img src="{{ asset('uploads/2023/07/brand05.png') }}" alt="Brand"></a>
+                    <a href="#"><img src="{{ asset('uploads/2023/partners/fedha.png') }}" alt="Brand" loading="lazy"></a>
                 </div>
             </div>
             <div class="col-12">
                 <div class="brand__item">
-                    <a href="#"><img src="{{ asset('uploads/2023/07/brand06.png') }}" alt="Brand"></a>
+                    <a href="#"><img src="{{ asset('uploads/2023/07/bidco logo.png') }}" alt="Brand" loading="lazy"></a>
                 </div>
             </div>
         </div>
@@ -862,18 +1644,18 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="cta__wrapper" style="background-image:url({{ asset('uploads/2023/07/cta_bg.png') }})">
+                <div class="cta__wrapper" style="background: linear-gradient(135deg, #2467ec 0%, #1a4fb8 100%); position: relative; overflow: hidden;">
                     <div class="section__title white-title">
-                        <h2 class="title tg-svg">Join us & <span class="position-relative"><span class="svg-icon" id="svg-cta-title" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Spread</span> Experiences</h2>
+                        <h2 class="title tg-svg">Transform Your <span class="position-relative"><span class="svg-icon" id="svg-cta-title" data-svg-icon="{{ asset('images/theme/icons/title_shape.svg') }}"></span>Business</span> With Technology</h2>
                     </div>
                     <div class="cta__desc">
-                        <p>Partner with ICT Africa to deliver innovative technology solutions and transform your digital presence across the continent.</p>
+                        <p>ICT Africa delivers cutting-edge technology solutions that empower businesses across the continent. Let's work together to drive your digital transformation and achieve sustainable growth.</p>
                     </div>
                     <div class="tg-button-wrap justify-content-center justify-content-md-end">
-                        <a href="{{ route('contact') }}" class="btn white-btn tg-svg"><span class="text">Become a Partner</span> <span class="svg-icon" id="cta-btn-partner" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
+                        <a href="#contact" class="btn white-btn tg-svg"><span class="text">Get Started</span> <span class="svg-icon" id="cta-btn-partner" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
                     </div>
-                    <img decoding="async" class="object" src="{{ asset('uploads/2023/07/cta_shape01-1.svg') }}" style="left: 25px; top: -35px;" alt="shape" data-aos="fade-down" data-aos-delay="400">
-                    <img decoding="async" class="object" src="{{ asset('uploads/2025/03/cta_shape02-new.svg') }}" style="right: -20px; bottom: -80px;" alt="shape" data-aos="fade-up" data-aos-delay="400">
+                    <img decoding="async" class="object" src="{{ asset('uploads/2023/07/cta_shape01-1.svg') }}" style="left: 25px; top: -35px;" alt="shape" data-aos="fade-down" data-aos-delay="400" loading="lazy">
+                    <img decoding="async" class="object" src="{{ asset('uploads/2025/03/cta_shape02-new.svg') }}" style="right: -20px; bottom: -80px;" alt="shape" data-aos="fade-up" data-aos-delay="400" loading="lazy">
                 </div>
             </div>
         </div>
@@ -882,7 +1664,9 @@
 <!-- cta-area-three-end -->
 
 <!-- contact-section -->
+<section id="contact">
 <x-contact-section :showImage="true" />
+</section>
 <!-- contact-section-end -->
 
 @endsection
@@ -904,18 +1688,19 @@ jQuery(document).ready(function(){
         fade: true,
     }).slickAnimation();
     
-    // Courses slider
+    // Courses slider with auto-scroll
     jQuery('.courses-slider-active').slick({
         dots: false,
         infinite: true,
-        speed: 600,
-        autoplay: false,
-        arrows: true,
+        speed: 800,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
         rtl: false,
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+        pauseOnHover: true,
+        cssEase: 'ease-in-out',
         responsive: [
             {
                 breakpoint: 1200,
@@ -942,6 +1727,15 @@ jQuery(document).ready(function(){
             },
         ]
     });
+    
+    // Custom scroll controls for services
+    window.scrollServices = function(direction) {
+        if (direction === 'next') {
+            jQuery('.courses-slider-active').slick('slickNext');
+        } else {
+            jQuery('.courses-slider-active').slick('slickPrev');
+        }
+    };
     
     // Testimonial slider
     jQuery('.testimonial-active').slick({
@@ -1011,7 +1805,7 @@ jQuery(document).ready(function(){
         autoplaySpeed: 0,
         cssEase: 'linear',
         arrows: false,
-        rtl: false,
+        rtl: true,
         slidesToShow: 6,
         slidesToScroll: 1,
         pauseOnHover: true,

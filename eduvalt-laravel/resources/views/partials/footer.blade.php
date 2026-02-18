@@ -13,7 +13,7 @@
                         <p>Leading ICT solutions provider in Africa, delivering innovative technology services and digital transformation for businesses across the continent.</p>
                         <ul class="list-wrap m-0 p-0">
                             <li class="address">Nairobi, Kenya</li>
-                            <li class="number">+254 123 456 789</li>
+                            <li class="number">+254 715 995 266</li>
                             <li class="socials">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -44,12 +44,14 @@
                         <h4 class="fw-title">Services</h4>
                         <div class="footer__link">
                             <ul class="menu">
-                                <li><a href="{{ route('blog') }}">ICT Training</a></li>
-                                <li><a href="{{ route('blog') }}">Software Development</a></li>
-                                <li><a href="{{ route('blog') }}">IT Infrastructure</a></li>
-                                <li><a href="{{ route('blog') }}">Cyber Security</a></li>
-                                <li><a href="{{ route('blog') }}">Cloud Solutions</a></li>
-                                <li><a href="{{ route('blog') }}">Digital Marketing</a></li>
+                                <li><a href="{{ route('service.show', 'ict-audits') }}">ICT Audits & IT Lifecycle Management</a></li>
+                                <li><a href="{{ route('service.show', 'outsourced-ict-support') }}">Outsourced ICT User Support</a></li>
+                                <li><a href="{{ route('service.show', 'network-infrastructure') }}">Network Infrastructure</a></li>
+                                <li><a href="{{ route('service.show', 'cloud-services') }}">Cloud Services</a></li>
+                                <li><a href="{{ route('service.show', 'datacenter-solutions') }}">Datacenter Solutions</a></li>
+                                <li><a href="{{ route('service.show', 'security-systems') }}">Security Systems</a></li>
+                                <li><a href="{{ route('service.show', 'bulk-sms') }}">Bulk SMS & ERP Integration</a></li>
+                                <li><a href="{{ route('service.show', 'software-solutions') }}">Software Solutions</a></li>
                             </ul>
                         </div>
                     </div>
@@ -60,11 +62,11 @@
                         <div class="footer__working-list">
                             <div class="footer__working-item">
                                 <span class="day">Mon - Fri</span>
-                                <span class="time">8:00 AM - 5:00 PM</span>
+                                <span class="time">7:30 AM - 4:30 PM</span>
                             </div>
                             <div class="footer__working-item">
                                 <span class="day">Saturday</span>
-                                <span class="time">9:00 AM - 2:00 PM</span>
+                                <span class="time">8:00 AM - 1:00 PM</span>
                             </div>
                             <div class="footer__working-item">
                                 <span class="day">Sunday</span>

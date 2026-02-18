@@ -12,11 +12,11 @@
                     <h3 class="title">{{ $service['title'] }}</h3>
                     <nav aria-label="breadcrumb" class="breadcrumb">
                         <span><a href="{{ route('home') }}">Home</a></span>
-                        <span class="breadcrumb-separator"><i class="fas fa-angle-right"></i></span>
+                        <span class="breadcrumb-separator"> / </span>
                         <span><a href="{{ route('blog') }}">Services</a></span>
-                        <span class="breadcrumb-separator"><i class="fas fa-angle-right"></i></span>
+                        <span class="breadcrumb-separator"> / </span>
                         <span><a href="#">{{ $service['category'] }}</a></span>
-                        <span class="breadcrumb-separator"><i class="fas fa-angle-right"></i></span>
+                        <span class="breadcrumb-separator"> / </span>
                         <span class="current-item">{{ $service['title'] }}</span>
                     </nav>
                 </div>
@@ -34,15 +34,15 @@
                     
                     <article class="blog__standard-post blog__details-wrapper format-image">
                         <div class="blog__standard-thumb">
-                            <img src="{{ asset($service['image']) }}" class="img-responsive wp-post-image" alt="{{ $service['title'] }}">
+                            <img src="{{ asset($service['image']) }}" class="img-responsive wp-post-image" alt="{{ $service['title'] }}" loading="lazy">
                         </div>
                         
                         <div class="blog__standard-content blog-details-content">
                             <!-- blog meta -->
                             <ul class="list-wrap blog__post-meta d-flex flex-wrap align-items-center p-0">
-                                <li><i class="flaticon-account"></i><a href="#">ICT Africa</a></li>
-                                <li><i class="flaticon-calendar-date"></i> Professional Service</li>
-                                <li><i class="flaticon-help"></i> <a href="#respond">Contact Us</a></li>
+                                <li><a href="#">ICT Africa</a></li>
+                                <li>Professional Service</li>
+                                <li><a href="#respond">Contact Us</a></li>
                             </ul>
                             
                             <div class="post-text">
@@ -58,7 +58,7 @@
                                 <div class="event-details-list">
                                     <ul class="list-wrap">
                                         @foreach($service['features'] as $feature)
-                                        <li><i class="fas fa-check-circle"></i>{{ $feature }}</li>
+                                        <li>{{ $feature }}</li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -78,59 +78,68 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
-                                        <div class="tg-post-social justify-content-start justify-content-md-end">
-                                            <h5 class="social-title">Social Share :</h5>
-                                            <ul class="list-wrap p-0 mb-0">
-                                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->url()) }}"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="https://twitter.com/intent/tweet?url={{ urlencode(request()->url()) }}"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(request()->url()) }}"><i class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="https://wa.me/?text={{ urlencode(request()->url()) }}"><i class="fab fa-whatsapp"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>
                     </article>
                     
-                    <!-- Contact Form -->
+                    <!-- Contact Information Card -->
                     <div id="respond" class="blog-post-comment">
                         <div class="comment-respond">
-                            <h3 class="comment-reply-title">Request a Quote</h3>
-                            <form action="{{ route('contact.submit') }}" method="post" class="comment-form">
-                                @csrf
-                                <input type="hidden" name="subject" value="Service Inquiry: {{ $service['title'] }}">
+                            <h3 class="comment-reply-title">Get In Touch With Us</h3>
+                            <p class="mb-4">Interested in this service? Contact us today and our team will get back to you promptly.</p>
+                            
+                            <div class="contact-info-card" style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #2467ec;">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="comment-field">
-                                            <input placeholder="Enter Name" name="name" type="text" class="tp-form-control" required>
-                                        </div>
+                                    <div class="col-md-6 mb-4">
+                                        <h5 style="color: #161439; font-weight: 600; margin-bottom: 15px;">Phone Numbers</h5>
+                                        <p style="margin-bottom: 8px;">
+                                            <a href="tel:+254204404993" style="color: #39557E; text-decoration: none; font-size: 16px;">
+                                                <strong>+254 20 440 4993</strong>
+                                            </a>
+                                        </p>
+                                        <p style="margin-bottom: 0;">
+                                            <a href="tel:+254204404151" style="color: #39557E; text-decoration: none; font-size: 16px;">
+                                                <strong>+254 20 440 4151</strong>
+                                            </a>
+                                        </p>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="comment-field">
-                                            <input placeholder="Enter Email" name="email" type="email" class="tp-form-control" required>
-                                        </div>
+                                    
+                                    <div class="col-md-6 mb-4">
+                                        <h5 style="color: #161439; font-weight: 600; margin-bottom: 15px;">Email Address</h5>
+                                        <p style="margin-bottom: 0;">
+                                            <a href="mailto:info@ict-a.com" style="color: #39557E; text-decoration: none; font-size: 16px;">
+                                                <strong>info@ict-a.com</strong>
+                                            </a>
+                                        </p>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="comment-field">
-                                            <input placeholder="Enter Phone Number" name="phone" type="tel" class="tp-form-control">
+                                    
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <h5 style="color: #161439; font-weight: 600; margin-bottom: 15px;">Our Location</h5>
+                                        <p style="color: #39557E; margin-bottom: 0; line-height: 1.6;">
+                                            The Odyssey Building,<br>
+                                            84 Muthithi Road, Westlands,<br>
+                                            Nairobi, Kenya
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h5 style="color: #161439; font-weight: 600; margin-bottom: 15px;">Working Hours</h5>
+                                        <p style="color: #39557E; margin-bottom: 5px;"><strong>Monday - Friday:</strong> 7:30 AM - 4:30 PM</p>
+                                        <p style="color: #39557E; margin-bottom: 0;"><strong>Saturday:</strong> 8:00 AM - 1:00 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <div class="d-flex flex-wrap gap-2" style="gap: 10px;">
+                                            <a href="tel:+254204404993" class="btn" style="background: #2467ec; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; display: inline-block;">Call Now</a>
+                                            <a href="mailto:info@ict-a.com?subject=Inquiry about {{ urlencode($service['title']) }}" class="btn" style="background: #2467ec; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; display: inline-block;">Send Email</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row post-input">
-                                    <div class="col-md-12">
-                                        <div class="comment-field">
-                                            <textarea class="tp-form-control msg-box" placeholder="Tell us about your project requirements" name="message" cols="45" rows="8" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="form-submit">
-                                    <div class="col-xl-12">
-                                        <button class="btn" type="submit">Send Request</button>
-                                    </div>
-                                </p>
-                            </form>
+                            </div>
                         </div>
                     </div>
                     
@@ -170,7 +179,7 @@
                             <div class="rc-post-item">
                                 <div class="rc-post-thumb">
                                     <a href="{{ route('service.show', $featured['slug']) }}">
-                                        <img src="{{ asset($featured['thumb']) }}" alt="{{ $featured['title'] }}">
+                                        <img src="{{ asset($featured['thumb']) }}" alt="{{ $featured['title'] }}" loading="lazy">
                                     </a>
                                 </div>
                                 <div class="rc-post-content">

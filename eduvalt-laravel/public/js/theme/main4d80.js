@@ -200,6 +200,9 @@ $('.speakers-active').slick({
 /*==================================
           Button Icon Draw
 ====================================*/
+// DISABLED: Vivus library removed to fix SVG errors
+// Uncomment if you add Vivus library back
+/*
 var $svgIconBox = $('.tg-svg');
 $svgIconBox.each(function() {
     var $this = $(this),
@@ -214,6 +217,7 @@ $svgIconBox.each(function() {
         $vivus.reset().play();
     });
 });
+*/
 
 
 /*===========================================

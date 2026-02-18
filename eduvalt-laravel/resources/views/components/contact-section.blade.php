@@ -43,6 +43,49 @@
                 @endif
             </div>
             <div class="col-lg-7">
+                @if(isset($showImage) && $showImage)
+                <!-- Contact information display for homepage -->
+                <div class="contact-info-wrap">
+                    <h2 class="title">Get In Touch With Us</h2>
+                    <p class="mb-4">We're here to help transform your digital vision into reality. Reach out to us for innovative ICT solutions, training programs, or partnership opportunities across East Africa.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-info-item">
+                                    <h5>Our Location</h5>
+                                    <p>8th & 9th Floor, The Odyssey Building <br> 84 Muthithi Road, Westlands, Nairobi, Kenya</p>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <h5>Phone Numbers</h5>
+                                    <p>
+                                        <a href="tel:+254715995266">+254 (0)715 995 266</a> / 
+                                        <a href="tel:+254775995266">775 995 266</a><br>
+                                        <a href="tel:+254736995266">+254 (0)736 995 266</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="contact-info-item">
+                                    <h5>Email Address</h5>
+                                    <p><a href="mailto:icta.automation@ict-a.com">icta.automation@ict-a.com</a><br>
+                                    <a href="mailto:info@ict-a.com">info@ict-a.com</a></p>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <h5>Working Hours</h5>
+                                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                
+                    </div>
+                </div>
+                @else
+                <!-- Contact form display for contact page -->
                 <div class="contact-form-wrap">
                     <h2 class="title">Get in Touch</h2>
                     
@@ -96,6 +139,7 @@
                         </div>
                     </form>
                 </div>
+                @endif
             </div>
         </div>
     </div>
@@ -108,6 +152,68 @@
     font-size: 24px;
     color: #2467ec;
     display: inline-block;
+}
+
+/* Contact info item styling for homepage - Two column layout without icons */
+.contact-info-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #2467ec;
+}
+
+.contact-info-item:hover {
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transform: translateX(5px);
+}
+
+.contact-info-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.contact-info-item p {
+    margin-bottom: 0;
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.contact-info-item a {
+    color: #2467ec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-item a:hover {
+    color: #1a4fb8;
+    text-decoration: underline;
+}
+
+/* Social links styling */
+.social-links .social-icon {
+    width: 40px;
+    height: 40px;
+    background: #2467ec;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    background: #1a4fb8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(36, 103, 236, 0.3);
 }
 
 /* Contact image styling */
@@ -129,6 +235,16 @@
 @media (max-width: 991.98px) {
     .contact-image-wrap {
         margin-bottom: 30px;
+    }
+    
+    .contact-info-item {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-info-list .row > .col-md-6 {
+        margin-bottom: 0;
     }
 }
 </style>
