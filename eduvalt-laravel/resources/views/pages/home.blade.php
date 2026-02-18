@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home - Eduvalt')
+@section('title', 'ICT-A')
 
 @push('styles')
 <style>
@@ -155,6 +155,152 @@
     background-color: #f0f0f0;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Area Decorative Shapes - Red Theme Matching Logo */
+.cta-shape-decoration {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure CTA content appears above decorative shapes */
+.cta__content,
+.cta__wrapper .section__title,
+.cta__wrapper .cta__desc,
+.cta__wrapper .tg-button-wrap {
+    position: relative;
+    z-index: 10;
+}
+
+.cta-shape-1 {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #E53935 0%, #C62828 100%);
+    top: -60px;
+    left: 30px;
+    animation: float-shape-1 6s ease-in-out infinite;
+}
+
+.cta-shape-2 {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #DC3545 0%, #B71C1C 100%);
+    bottom: -40px;
+    right: 40px;
+    animation: float-shape-2 8s ease-in-out infinite;
+}
+
+.cta-shape-3 {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(45deg, #E53935 0%, #FF5252 100%);
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    animation: pulse-shape 4s ease-in-out infinite;
+}
+
+.cta-area-two .cta-decoration-1 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #E53935 0%, #C62828 100%);
+    top: -80px;
+    right: 10%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morph-shape 8s ease-in-out infinite;
+}
+
+.cta-area-two .cta-decoration-2 {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #DC3545 0%, #B71C1C 100%);
+    bottom: -60px;
+    left: 8%;
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    animation: rotate-morph 10s linear infinite;
+}
+
+.cta-area-two .cta-decoration-3 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #FF5252 0%, #E53935 100%);
+    bottom: 20%;
+    right: 5%;
+    border-radius: 50%;
+    animation: pulse-shape 5s ease-in-out infinite;
+}
+
+@keyframes float-shape-1 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(10px, -15px) rotate(5deg);
+    }
+    50% {
+        transform: translate(-5px, -10px) rotate(-3deg);
+    }
+    75% {
+        transform: translate(15px, -20px) rotate(7deg);
+    }
+}
+
+@keyframes float-shape-2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(-15px, 10px) rotate(-5deg);
+    }
+    66% {
+        transform: translate(10px, -5px) rotate(8deg);
+    }
+}
+
+@keyframes pulse-shape {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.25;
+    }
+}
+
+@keyframes morph-shape {
+    0%, 100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+        transform: rotate(45deg);
+    }
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+}
+
+@keyframes rotate-morph {
+    0% {
+        border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+        transform: rotate(0deg);
+    }
+    50% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+        transform: rotate(180deg);
+    }
+    100% {
+        border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -1421,9 +1567,9 @@
         </div>
     </div>
     <div class="cta__shapes">
-        <img src="{{ asset('uploads/2023/07/cta_shape001.svg') }}" alt="img" class="position-absolute" data-aos="fade-down-right" data-aos-delay="300" loading="lazy">
-        <img src="{{ asset('uploads/2023/07/cta_shape002.png') }}" alt="img" class="position-absolute" loading="lazy">
-        <img src="{{ asset('uploads/2023/07/cta_shape003.svg') }}" alt="img" class="position-absolute" data-aos="fade-up-left" data-aos-delay="300" loading="lazy">
+        <div class="cta-shape-decoration cta-decoration-1" data-aos="fade-down-right" data-aos-delay="300"></div>
+        <div class="cta-shape-decoration cta-decoration-2" data-aos="fade-up-left" data-aos-delay="400"></div>
+        <div class="cta-shape-decoration cta-decoration-3"></div>
     </div>
 </section>
 <!-- cta-area-end -->
@@ -1631,7 +1777,7 @@
             </div>
             <div class="col-12">
                 <div class="brand__item">
-                    <a href="#"><img src="{{ asset('uploads/2023/07/bidco logo.png') }}" alt="Brand" loading="lazy"></a>
+                    <a href="#"><img src="{{ asset('uploads/2023/partners/bidco logo.png') }}" alt="Brand" loading="lazy"></a>
                 </div>
             </div>
         </div>
@@ -1654,8 +1800,9 @@
                     <div class="tg-button-wrap justify-content-center justify-content-md-end">
                         <a href="#contact" class="btn white-btn tg-svg"><span class="text">Get Started</span> <span class="svg-icon" id="cta-btn-partner" data-svg-icon="{{ asset('images/theme/icons/btn-arrow.svg') }}"></span></a>
                     </div>
-                    <img decoding="async" class="object" src="{{ asset('uploads/2023/07/cta_shape01-1.svg') }}" style="left: 25px; top: -35px;" alt="shape" data-aos="fade-down" data-aos-delay="400" loading="lazy">
-                    <img decoding="async" class="object" src="{{ asset('uploads/2025/03/cta_shape02-new.svg') }}" style="right: -20px; bottom: -80px;" alt="shape" data-aos="fade-up" data-aos-delay="400" loading="lazy">
+                    <div class="cta-shape-decoration cta-shape-1" data-aos="fade-down" data-aos-delay="400"></div>
+                    <div class="cta-shape-decoration cta-shape-2" data-aos="fade-up" data-aos-delay="500"></div>
+                    <div class="cta-shape-decoration cta-shape-3"></div>
                 </div>
             </div>
         </div>

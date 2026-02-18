@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title><?php echo $__env->yieldContent('title', 'Eduvalt - Online Education'); ?></title>
+    <title><?php echo $__env->yieldContent('title', 'ICT-A'); ?></title>
     
     <!-- Favicon -->
-    <link rel="icon" href="<?php echo e(asset('uploads/2023/06/favicon.png')); ?>" sizes="32x32" />
-    <link rel="apple-touch-icon" href="<?php echo e(asset('uploads/2023/06/favicon.png')); ?>" />
+    <link rel="icon" href="<?php echo e(asset('images/theme/logo/logo.png')); ?>" sizes="32x32" />
+    <link rel="apple-touch-icon" href="<?php echo e(asset('images/theme/logo/logo.png')); ?>" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Hind:wght@400,500,600,700|Lexend+Deca:wght@400,500,600,700,800&display=swap" rel="stylesheet">
