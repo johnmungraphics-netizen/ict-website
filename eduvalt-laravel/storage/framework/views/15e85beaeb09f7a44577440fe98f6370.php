@@ -203,36 +203,6 @@
     animation: pulse-shape 4s ease-in-out infinite;
 }
 
-.cta-area-two .cta-decoration-1 {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #E53935 0%, #C62828 100%);
-    top: -80px;
-    right: 10%;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: morph-shape 8s ease-in-out infinite;
-}
-
-.cta-area-two .cta-decoration-2 {
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, #DC3545 0%, #B71C1C 100%);
-    bottom: -60px;
-    left: 8%;
-    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-    animation: rotate-morph 10s linear infinite;
-}
-
-.cta-area-two .cta-decoration-3 {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(45deg, #FF5252 0%, #E53935 100%);
-    bottom: 20%;
-    right: 5%;
-    border-radius: 50%;
-    animation: pulse-shape 5s ease-in-out infinite;
-}
-
 @keyframes float-shape-1 {
     0%, 100% {
         transform: translate(0, 0) rotate(0deg);
@@ -1565,11 +1535,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="cta__shapes">
-        <div class="cta-shape-decoration cta-decoration-1" data-aos="fade-down-right" data-aos-delay="300"></div>
-        <div class="cta-shape-decoration cta-decoration-2" data-aos="fade-up-left" data-aos-delay="400"></div>
-        <div class="cta-shape-decoration cta-decoration-3"></div>
     </div>
 </section>
 <!-- cta-area-end -->
