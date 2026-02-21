@@ -29,12 +29,10 @@
                         <h4 class="fw-title">Resources</h4>
                         <div class="footer__link">
                             <ul class="menu">
-                                <li><a href="{{ route('about') }}">About</a></li>
-                                <li><a href="{{ route('contact') }}">Contact</a></li>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Refund</a></li>
-                                <li><a href="#">Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="{{ route('home') }}#about">About Us</a></li>
+                                <li><a href="{{ route('home') }}#services">Our Services</a></li>
+                                <li><a href="{{ route('home') }}#contact">Contact Us</a></li>
+                                <li><a href="{{ route('home') }}#partners">Our Partners</a></li>
                             </ul>
                         </div>
                     </div>

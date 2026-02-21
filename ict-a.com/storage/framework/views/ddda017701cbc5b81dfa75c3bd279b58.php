@@ -41,6 +41,91 @@
         font-size: 14px;
     }
 }
+
+/* Mobile Navigation Styling - Always visible and responsive */
+@media (max-width: 1199.98px) {
+    /* Make navigation visible on all screens */
+    .tgmenu__navbar-wrap.tgmenu__main-menu {
+        display: flex !important;
+        flex: 1;
+        justify-content: center;
+        margin: 0 10px;
+    }
+    
+    .tgmenu__navbar-wrap .navigation {
+        display: flex !important;
+        flex-direction: row;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item {
+        margin: 0 !important;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+        white-space: nowrap;
+        display: block;
+        color: #333;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links:hover,
+    .tgmenu__navbar-wrap .navigation .menu-item.active .nav-links {
+        color: #2467ec !important;
+    }
+    
+    /* Adjust logo size on mobile */
+    .logo .main-logo img {
+        max-width: 100px !important;
+    }
+    
+    /* Compact header on mobile */
+    .tgmenu__nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Even more compact on small mobile */
+    .tgmenu__navbar-wrap .navigation {
+        gap: 2px;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links {
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+    }
+    
+    .logo .main-logo img {
+        max-width: 80px !important;
+    }
+    
+    /* Hide top info bar on very small screens */
+    .tg-header__top {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links {
+        font-size: 10px !important;
+        padding: 5px 6px !important;
+    }
+    
+    .logo .main-logo img {
+        max-width: 70px !important;
+    }
+}
 </style>
 <?php $__env->stopPush(); ?>
 

@@ -48,6 +48,111 @@
     display: inline-block;
 }
 
+/* Completely remove scroll-to-top button on all screen sizes */
+.scroll__top,
+.scroll-to-target {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Remove mobile hamburger menu button completely */
+.mobile-nav-toggler {
+    display: none !important;
+}
+
+/* Hide old mobile menu and backdrop */
+.tgmobile__menu,
+.tgmobile__menu-backdrop {
+    display: none !important;
+}
+
+/* Mobile Navigation Styling - Always visible */
+@media (max-width: 1199.98px) {
+    /* Make navigation visible on all screens */
+    .tgmenu__navbar-wrap.tgmenu__main-menu {
+        display: flex !important;
+        flex: 1;
+        justify-content: center;
+        margin: 0 10px;
+    }
+    
+    .tgmenu__navbar-wrap .navigation {
+        display: flex !important;
+        flex-direction: row;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item {
+        margin: 0 !important;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+        white-space: nowrap;
+        display: block;
+        color: #333;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links:hover,
+    .tgmenu__navbar-wrap .navigation .menu-item.active .nav-links {
+        color: #2467ec !important;
+    }
+    
+    /* Adjust logo size on mobile */
+    .logo .main-logo img {
+        max-width: 100px !important;
+    }
+    
+    /* Compact header on mobile */
+    .tgmenu__nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Even more compact on small mobile */
+    .tgmenu__navbar-wrap .navigation {
+        gap: 2px;
+    }
+    
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links {
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+    }
+    
+    .logo .main-logo img {
+        max-width: 80px !important;
+    }
+    
+    /* Hide top info bar on very small screens */
+    .tg-header__top {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .tgmenu__navbar-wrap .navigation .menu-item .nav-links {
+        font-size: 10px !important;
+        padding: 5px 6px !important;
+    }
+    
+    .logo .main-logo img {
+        max-width: 70px !important;
+    }
+}
+
 /* Button styling - Reduced size for better visual hierarchy */
 .btn {
     font-size: 14px !important;
@@ -1315,6 +1420,33 @@
 </section>
 <!-- slider-area-end -->
 
+<!-- about-area -->
+<section id="about" class="section-py-120">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="about__title-wrap">
+                    <div class="section__title">
+                        <span class="sub-title">Who we are</span>
+                        <h2 class="title tg-svg">Your Trusted <span class="position-relative"><span class="svg-icon" id="about-svg-1" data-svg-icon="<?php echo e(asset('images/theme/icons/title_shape.svg')); ?>"></span>Partner</span> In Technology Solutions</h2>
+                    </div>
+                    <p class="fw-medium">ICT Africa is a leading information and communication technology company dedicated to providing innovative solutions that drive digital transformation across Africa.</p>
+                    <p>With years of experience and a team of highly skilled professionals, we specialize in delivering comprehensive ICT services including software development, IT infrastructure, cybersecurity, training, and consultancy. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses and organizations seeking to leverage technology for growth and efficiency.</p>
+                    <div class="tg-button-wrap">
+                        <a href="#services" class="btn tg-svg"><span class="text">Our Services</span> <span class="svg-icon" id="about-btn" data-svg-icon="<?php echo e(asset('images/theme/icons/btn-arrow.svg')); ?>"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="about__image text-center">
+                    <img decoding="async" src="<?php echo e(asset('uploads/2019/05/team.jpg')); ?>" alt="ICT Africa" style="max-width: 350px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-area-end -->
+
 <!-- services-area -->
 <section id="services" class="courses-area" style="padding-top: 120px; padding-bottom: 60px;">
     <div class="container">
@@ -1552,68 +1684,6 @@
 </section>
 <!-- courses-area-end -->
 
-<!-- fact-area -->
-<section class="fact-area" style="background-color: #f7f7f7; padding-top: 60px; padding-bottom: 120px;">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <div class="section__title">
-                    <span class="sub-title">Our Impact</span>
-                    <h2 class="title tg-svg">Driving <span class="position-relative"><span class="svg-icon" id="svg-skills" data-svg-icon="<?php echo e(asset('images/theme/icons/title_shape.svg')); ?>"></span>Digital</span> Transformation Across Africa</h2>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="fact__item-two text-center">
-                    <div class="fact__icon-two">
-                        <img decoding="async" src="<?php echo e(asset('images/icons/icon-1.png')); ?>" alt="Clients Icon" loading="lazy">
-                    </div>
-                    <div class="fact__content-two">
-                        <h3 class="count"><span class="odometer" data-count="500">0</span>+</h3>
-                        <p>Satisfied Clients</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="fact__item-two text-center">
-                    <div class="fact__icon-two">
-                        <img decoding="async" src="<?php echo e(asset('images/icons/icon-4.png')); ?>" alt="Projects Icon" loading="lazy">
-                    </div>
-                    <div class="fact__content-two">
-                        <h3 class="count"><span class="odometer" data-count="1200">0</span>+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="fact__item-two text-center">
-                    <div class="fact__icon-two">
-                        <img decoding="async" src="<?php echo e(asset('images/icons/icon-1.png')); ?>" alt="Professionals Icon" loading="lazy">
-                    </div>
-                    <div class="fact__content-two">
-                        <h3 class="count"><span class="odometer" data-count="50">0</span>+</h3>
-                        <p>Expert Professionals</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="fact__item-two text-center">
-                    <div class="fact__icon-two">
-                        <img decoding="async" src="<?php echo e(asset('images/icons/icon-4.png')); ?>" alt="Experience Icon" loading="lazy">
-                    </div>
-                    <div class="fact__content-two">
-                        <h3 class="count"><span class="odometer" data-count="15">0</span>+</h3>
-                        <p>Years of Experience</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- fact-area-end -->
-
 <!-- cta-area -->
 <section class="cta-area-two position-relative">
     <div class="cta__bg" style="background-image:url(<?php echo e(asset('uploads/2023/07/employees.jpg')); ?>)"></div>
@@ -1633,33 +1703,6 @@
     </div>
 </section>
 <!-- cta-area-end -->
-
-<!-- about-area -->
-<section id="about" class="section-py-120">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <div class="about__title-wrap">
-                    <div class="section__title">
-                        <span class="sub-title">Who we are</span>
-                        <h2 class="title tg-svg">Your Trusted <span class="position-relative"><span class="svg-icon" id="about-svg-1" data-svg-icon="<?php echo e(asset('images/theme/icons/title_shape.svg')); ?>"></span>Partner</span> In Technology Solutions</h2>
-                    </div>
-                    <p class="fw-medium">ICT Africa is a leading information and communication technology company dedicated to providing innovative solutions that drive digital transformation across Africa.</p>
-                    <p>With years of experience and a team of highly skilled professionals, we specialize in delivering comprehensive ICT services including software development, IT infrastructure, cybersecurity, training, and consultancy. Our commitment to excellence and customer satisfaction has made us a trusted partner for businesses and organizations seeking to leverage technology for growth and efficiency.</p>
-                    <div class="tg-button-wrap">
-                        <a href="#services" class="btn tg-svg"><span class="text">Our Services</span> <span class="svg-icon" id="about-btn" data-svg-icon="<?php echo e(asset('images/theme/icons/btn-arrow.svg')); ?>"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="about__image text-center">
-                    <img decoding="async" src="<?php echo e(asset('uploads/2019/05/team.jpg')); ?>" alt="ICT Africa" style="max-width: 350px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- about-area-end -->
 
 <!-- mission-vision-values -->
 <section class="features-area section-py-120" style="background-color: #f7f7f7;">
@@ -1717,133 +1760,6 @@
     </div>
 </section>
 <!-- mission-vision-values-end -->
-
-<!-- testimonial-area -->
-<div class="testimonial-area-wrapper">
-    <div class="container">
-        <!-- Section Title -->
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-5 text-center">
-                <div class="section__title">
-                    <span class="sub-title">Our Testimonials</span>
-                    <h2 class="title tg-svg">What Our <span class="position-relative"><span class="svg-icon" id="svg-testi" data-svg-icon="<?php echo e(asset('images/theme/icons/title_shape.svg')); ?>"></span>Clients</span> Say</h2>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Three Column Layout -->
-        <div class="row">
-            <!-- Left Column - Decorative Images -->
-            <div class="col-lg-1 d-none d-lg-block">
-                <div class="testimonial-decorative-left">
-                    <img src="<?php echo e(asset('uploads/2023/07/person4.png')); ?>" alt="testimonial" class="testi-deco-img-1" width="100" height="100" loading="lazy">
-                    <img src="<?php echo e(asset('uploads/2023/07/person5.png')); ?>" alt="testimonial" class="testi-deco-img-2" width="100" height="100" loading="lazy">
-                    <img src="<?php echo e(asset('uploads/2023/07/person1.png')); ?>" alt="testimonial" class="testi-deco-img-3" width="100" height="100" loading="lazy">
-                </div>
-            </div>
-            
-            <!-- Middle Column - Testimonial Slider -->
-            <div class="col-lg-10 col-md-12">
-                <div class="testimonial-active">
-                    <div class="testimonial__item">
-                        <div class="testimonial__quote">
-                            <img src="<?php echo e(asset('images/theme/icons/quote02.png')); ?>" alt="quote" loading="lazy">
-                        </div>
-                        
-                        <p>ICT Africa transformed our entire IT infrastructure. Their professional team delivered beyond our expectations, implementing a robust system that has significantly improved our operational efficiency. Highly recommended!</p>
-                        <div class="testimonial__avatar">
-                            <h4 class="name">Sarah Kamau</h4>
-                            <span class="designation">CEO, TechVisionEUR Kenya</span>
-                        </div>
-                    </div>
-                    <div class="testimonial__item">
-                        <div class="testimonial__quote">
-                            <img src="<?php echo e(asset('images/theme/icons/quote02.png')); ?>" alt="quote" loading="lazy">
-                        </div>
-                        <div class="testimonial__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>The software development services provided by ICT Africa have been exceptional. They understood our business needs perfectly and delivered a custom solution that streamlined our processes. Their ongoing support is outstanding.</p>
-                        <div class="testimonial__avatar">
-                            <h4 class="name">Michael Odhiambo</h4>
-                            <span class="designation">IT Director, African Finance Corp</span>
-                        </div>
-                    </div>
-                    <div class="testimonial__item">
-                        <div class="testimonial__quote">
-                            <img src="<?php echo e(asset('images/theme/icons/quote02.png')); ?>" alt="quote" loading="lazy">
-                        </div>
-                        <div class="testimonial__rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>Working with ICT Africa on our digital transformation journey has been a game-changer. Their expertise in cybersecurity and cloud solutions has positioned us as a leader in our industry. True professionals!</p>
-                        <div class="testimonial__avatar">
-                            <h4 class="name">Amina Hassan</h4>
-                            <span class="designation">Operations Manager, East Africa Logistics</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right Column - Decorative Images -->
-            <div class="col-lg-1 d-none d-lg-block">
-                <div class="testimonial-decorative-right">
-                    <img src="<?php echo e(asset('uploads/2023/07/person1.png')); ?>" alt="testimonial" class="testi-deco-img-4" width="100" height="100" loading="lazy">
-                    <img src="<?php echo e(asset('uploads/2023/07/person2.png')); ?>" alt="testimonial" class="testi-deco-img-5" width="100" height="100" loading="lazy">
-                    <img src="<?php echo e(asset('uploads/2023/07/person3.png')); ?>" alt="testimonial" class="testi-deco-img-6" width="100" height="100" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- testimonial-area-end -->
-
-<!-- brand-area -->
-<section class="brand-area section-py-120">
-    <div class="container">
-        <div class="row brand-slider-active">
-            <div class="col-12">
-                <div class="brand__item">
-                    <a href="#"><img src="<?php echo e(asset('uploads/2023/partners/tuff.png')); ?>" alt="Brand" loading="lazy"></a>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="brand__item">
-                    <a href="#"><img src="<?php echo e(asset('uploads/2023/partners/vet care logo.png')); ?>" alt="Brand" loading="lazy"></a>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="brand__item">
-                    <a href="#"><img src="<?php echo e(asset('uploads/2023/partners/apex steel logo.png')); ?>" alt="Brand" loading="lazy"></a>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="brand__item">
-                    <a href="#"><img src="<?php echo e(asset('uploads/2023/partners/pure hwalth logo.webp')); ?>" alt="Brand" loading="lazy"></a>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="brand__item">
-                    <a href="#"><img src="<?php echo e(asset('uploads/2023/partners/fedha.png')); ?>" alt="Brand" loading="lazy"></a>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="brand__item">
-                    <a href="#"><img src="<?php echo e(asset('uploads/2023/partners/bidco logo.png')); ?>" alt="Brand" loading="lazy"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- brand-area-end -->
 
 <!-- cta-area-three -->
 <section class="cta-area-three">

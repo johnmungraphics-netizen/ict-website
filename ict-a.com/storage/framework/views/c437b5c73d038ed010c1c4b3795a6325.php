@@ -357,8 +357,17 @@
     </main>
     <!-- main-area-end -->
 
-    <!-- Footer -->
-    <?php echo $__env->make('partials.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <!-- Minimal Footer -->
+    <footer style="background: #2467ec; padding: 15px 0; margin-top: 0;">
+        <div class="container">
+            <div class="text-center">
+                <p style="margin: 0; color: #ffffff; font-size: 14px;">
+                    Copyright © <?php echo e(date('Y')); ?> ICT Africa. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
 
     <!-- JavaScript Files (Removed broken: tg-cursor.min4d80.js, vivus.min4d80.js) -->
     <script src="<?php echo e(asset('js/vendor/jquery.minf43b.js')); ?>"></script>

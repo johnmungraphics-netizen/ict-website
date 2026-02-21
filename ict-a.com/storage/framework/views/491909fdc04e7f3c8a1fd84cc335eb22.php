@@ -29,12 +29,10 @@
                         <h4 class="fw-title">Resources</h4>
                         <div class="footer__link">
                             <ul class="menu">
-                                <li><a href="<?php echo e(route('about')); ?>">About</a></li>
-                                <li><a href="<?php echo e(route('contact')); ?>">Contact</a></li>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Refund</a></li>
-                                <li><a href="#">Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="<?php echo e(route('home')); ?>#about">About Us</a></li>
+                                <li><a href="<?php echo e(route('home')); ?>#services">Our Services</a></li>
+                                <li><a href="<?php echo e(route('home')); ?>#contact">Contact Us</a></li>
+                                <li><a href="<?php echo e(route('home')); ?>#partners">Our Partners</a></li>
                             </ul>
                         </div>
                     </div>

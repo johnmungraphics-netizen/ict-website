@@ -27,7 +27,7 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="content">
-                                <p>+254 (0)715 995 266 / 775 995 266 <br> +254 (0)736 995 266</p>
+                                <p>Office: +254 (0)715 995 266 / 01 11 116 000 <br> WhatsApp: +254 (0)736 995 266</p>
                             </div>
                         </li>
                         <li>
@@ -35,7 +35,7 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="content">
-                                <p>icta.automation@ict-a.com</p>
+                                <p>info@ict-a.com</p>
                             </div>
                         </li>
                     </ul>
@@ -60,9 +60,8 @@
                                 <div class="contact-info-item">
                                     <h5>Phone Numbers</h5>
                                     <p>
-                                        <a href="tel:+254715995266">+254 (0)715 995 266</a> / 
-                                        <a href="tel:+254775995266">775 995 266</a><br>
-                                        <a href="tel:+254736995266">+254 (0)736 995 266</a>
+                                        Office: <a href="tel:+254715995266">+254 (0)715 995 266</a> / <a href="tel:+254711116000">07 111 116 000</a><br>
+                                        WhatsApp: <a href="tel:+254736995266">+254 (0)736 995 266</a>
                                     </p>
                                 </div>
                             </div>
@@ -70,8 +69,7 @@
                             <div class="col-md-6">
                                 <div class="contact-info-item">
                                     <h5>Email Address</h5>
-                                    <p><a href="mailto:icta.automation@ict-a.com">icta.automation@ict-a.com</a><br>
-                                    <a href="mailto:info@ict-a.com">info@ict-a.com</a></p>
+                                    <p><a href="mailto:info@ict-a.com">info@ict-a.com</a></p>
                                 </div>
                                 
                                 <div class="contact-info-item">

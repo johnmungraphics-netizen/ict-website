@@ -27,7 +27,6 @@
         <div class="container custom-container">
             <div class="row">
                 <div class="col-12">
-                    <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
                     <div class="tgmenu__wrap">
                         <nav class="tgmenu__nav">
                             <div class="logo">
@@ -36,7 +35,7 @@
                                 </a>
                             </div>
 
-                            <div class="tgmenu__categories d-none d-md-block">
+                            <div class="tgmenu__categories d-none d-lg-block">
                                 <div class="dropdown">
                                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,33 +44,37 @@
                                         Categories
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="{{ route('service.show', 'ict-audits') }}" class="nav-links">ICT Audits & IT Lifecycle Management</a></li>
-                                        <li class="nav-item"><a href="{{ route('service.show', 'outsourced-ict-support') }}" class="nav-links">Outsourced ICT User Support</a></li>
-                                        <li class="nav-item"><a href="{{ route('service.show', 'network-infrastructure') }}" class="nav-links">Network Infrastructure</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'ict-audits') }}" class="nav-links">ICT Audits</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'outsourced-ict-support') }}" class="nav-links">ICT Support</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'network-infrastructure') }}" class="nav-links">Network</a></li>
                                         <li class="nav-item"><a href="{{ route('service.show', 'cloud-services') }}" class="nav-links">Cloud Services</a></li>
-                                        <li class="nav-item"><a href="{{ route('service.show', 'datacenter-solutions') }}" class="nav-links">Datacenter Solutions</a></li>
-                                        <li class="nav-item"><a href="{{ route('service.show', 'security-systems') }}" class="nav-links">Security Systems</a></li>
-                                        <li class="nav-item"><a href="{{ route('service.show', 'bulk-sms') }}" class="nav-links">Bulk SMS &amp; ERP Integration</a></li>
-                                        <li class="nav-item"><a href="{{ route('service.show', 'software-solutions') }}" class="nav-links">Software Solutions</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'datacenter-solutions') }}" class="nav-links">Datacenter</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'security-systems') }}" class="nav-links">Security</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'bulk-sms') }}" class="nav-links">Bulk SMS</a></li>
+                                        <li class="nav-item"><a href="{{ route('service.show', 'software-solutions') }}" class="nav-links">Software</a></li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex menu-position-left">
+                            <!-- Mobile & Desktop Navigation - Always Visible -->
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu">
                                 <ul class="navigation">
                                     <li class="menu-item {{ request()->routeIs('home') ? 'active' : '' }}">
                                         <a href="{{ route('home') }}" class="nav-links">Home</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="{{ route('home') }}#about" class="nav-links">About Us</a>
+                                        <a href="{{ route('home') }}#about" class="nav-links">About</a>
                                     </li>
                                     <li class="menu-item">
                                         <a href="{{ route('home') }}#services" class="nav-links">Services</a>
                                     </li>
+                                    <li class="menu-item d-lg-none">
+                                        <a href="{{ route('home') }}#contact" class="nav-links">Contact</a>
+                                    </li>
                                 </ul>
                             </div>
 
-                            <div class="tgmenu__search-bar">
+                            <div class="tgmenu__search-bar d-none d-lg-block">
                                 <div class="service-search-wrapper">
                                     <input type="text" id="serviceSearchInput" class="service-search-input" placeholder="Search Services" autocomplete="off">
                                     <i class="fas fa-search search-icon"></i>
@@ -104,7 +107,7 @@
                                 </div>
                             </div>
 
-                            <div class="tgmenu__action">
+                            <div class="tgmenu__action d-none d-lg-block">
                                 <ul class="list-wrap">
                                     <li class="header-btn">
                                         <a href="{{ route('home') }}#contact" class="btn">Contact Us</a>
@@ -113,78 +116,6 @@
                             </div>
                         </nav>
                     </div>
-
-                    <!-- Mobile Menu  -->
-                    <div class="tgmobile__menu">
-                        <nav class="tgmobile__menu-box">
-                            <div class="close-btn"><i class="tg-flaticon-close-1"></i></div>
-                            <div class="nav-logo">
-                                <a class="main-logo" href="{{ route('home') }}">
-                                    <img src="{{ asset('images/theme/logo/logo.png') }}" height="auto" width="150px" alt="Logo" />
-                                </a>
-                            </div>
-
-                            <div class="tgmobile__search">
-                                <div class="service-search-wrapper mobile-search">
-                                    <input type="text" id="mobileServiceSearchInput" class="service-search-input" placeholder="Search Services" autocomplete="off">
-                                    <i class="fas fa-search search-icon"></i>
-                                    <ul class="service-search-dropdown" id="mobileServiceSearchDropdown">
-                                        <li class="service-item" data-name="ICT Audits & IT Lifecycle Management">
-                                            <a href="{{ route('service.show', 'ict-audits') }}">ICT Audits & IT Lifecycle Management</a>
-                                        </li>
-                                        <li class="service-item" data-name="Outsourced ICT User Support">
-                                            <a href="{{ route('service.show', 'outsourced-ict-support') }}">Outsourced ICT User Support</a>
-                                        </li>
-                                        <li class="service-item" data-name="Network Infrastructure">
-                                            <a href="{{ route('service.show', 'network-infrastructure') }}">Network Infrastructure</a>
-                                        </li>
-                                        <li class="service-item" data-name="Cloud Services">
-                                            <a href="{{ route('service.show', 'cloud-services') }}">Cloud Services</a>
-                                        </li>
-                                        <li class="service-item" data-name="Datacenter Solutions">
-                                            <a href="{{ route('service.show', 'datacenter-solutions') }}">Datacenter Solutions</a>
-                                        </li>
-                                        <li class="service-item" data-name="Security Systems">
-                                            <a href="{{ route('service.show', 'security-systems') }}">Security Systems</a>
-                                        </li>
-                                        <li class="service-item" data-name="Bulk SMS & ERP Integration">
-                                            <a href="{{ route('service.show', 'bulk-sms') }}">Bulk SMS &amp; ERP Integration</a>
-                                        </li>
-                                        <li class="service-item" data-name="Software Solutions">
-                                            <a href="{{ route('service.show', 'software-solutions') }}">Software Solutions</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="tgmobile__menu-outer">
-                                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-                            </div>
-
-                            <div class="tgmenu__action">
-                                <ul class="list-wrap">
-                                    <li class="header-btn login-btn">
-                                        <a href="{{ route('home') }}#contact" class="btn">Contact Us</a>
-                                    </li>
-                                    <li class="header-btn">
-                                        <a href="#" class="btn">Try For Free</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="social-links">
-                                <ul class="clearfix">
-                                    <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li class="linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li class="telegram"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="tgmobile__menu-backdrop"></div>
-                    <!-- End Mobile Menu -->
                 </div>
             </div>
         </div>
